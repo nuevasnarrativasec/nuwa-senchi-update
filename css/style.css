@@ -1237,6 +1237,7 @@ html {
 
     }
         .box-svg{
+            cursor: pointer;
             max-width: 500px;
             margin: 0 auto;
             position: relative;
@@ -1260,7 +1261,7 @@ html {
             font: 15px/1.5 "Roboto", serif;
             font-weight: 400;
             margin: 10px auto;
-            max-width: 420px;
+            max-width: 600px;
             text-align: center;
         }
         .box-grafico-puntaje{
