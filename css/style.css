@@ -1236,6 +1236,20 @@ html {
     .box-main-promesometro{
 
     }
+        .box-svg{
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }    
+            img.flecha-svg{
+                bottom: 0;
+                position: absolute;
+                scale: .5;        
+                transform: translate(0, 50%);
+            }
+            .segment {
+                cursor: pointer;
+            }
         .box-main-promesometro h4{
             font: 21px/1.5 "Roboto", serif;
             font-weight: 700;
