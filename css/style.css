@@ -366,10 +366,27 @@ html {
                 }
 
 .main-audio{
+    margin-top: 50px;
     overflow: hidden;
     padding-bottom: 90px;
     position: relative;
 }
+    .ctn-main-audio{
+        border-bottom: 1px solid #c2c2c2;
+        border-top: 1px solid #c2c2c2;
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 40px 0;
+        position: relative;
+    }
+        img.mariposa-audio{
+            display: block;
+            margin: 0 auto;
+            margin-bottom: -15px;
+            max-width: 50px;            
+            position: relative;
+            z-index: 10;
+        }
     .mariposa-verde-grande{
         max-width: 450px;
         position: absolute;
@@ -408,7 +425,7 @@ html {
         font: 48px/1.3 'from_where_you_areregular';
         margin: 0 auto;
         max-width: 400px;
-        padding: 80px 0 30px;
+        padding: 10px 0 30px;
         text-align: center;
         text-transform: uppercase;
     }
@@ -421,6 +438,7 @@ html {
     .box-audio{
         margin: 0 auto;
         max-width: 305px;
+        text-align: center;
     }
         .box-audio img{
             display: inline-block;
@@ -431,22 +449,31 @@ html {
             z-index: 10;
         }
         .ctn-audio{
-            border: 2px solid #8419b9;
+            border: 2px solid #2e2e2e;
             border-radius: 22px;
             box-sizing: border-box;
             display: inline-block;
-            margin-left: -25px;
             min-width: 220px;
             position: relative;
-            top: -5px;
             vertical-align: bottom;            
         }
+            .ctn-audio::before{
+                background: url('../img/flecha-arriba.png') no-repeat center top;
+                background-size: 100%;
+                content: '';
+                height: 10px;
+                left: 25px;
+                position: absolute;
+                top: -10px;
+                width: 20px;                                
+            }
             .ctn-audio p{
-                color: #8419b9;
+                color: #2e2e2e;
                 font: 15px/1.6 "Roboto", serif;
                 font-weight: 700;
                 margin: 0 auto;
-                padding: 10px 20px 10px 30px;
+                padding: 10px 20px 10px 15px;
+                text-align: left;
                 text-transform: uppercase;
             }
             #player-container,
@@ -604,7 +631,7 @@ html {
                     font-weight: 700;
                 }
         #startScreen button{
-            background-color: #EA9015;
+            background-color: #BFE0DA;
             border: none;
             border-radius: 25px;
             color: #000;
@@ -645,15 +672,15 @@ html {
                     font-size: 30px;
                 }
                 #uno{
-                    background: url('../img/circulo-1.png') no-repeat center center;
+                    background: url('../img/circulo-1-nuevo.png') no-repeat center center;
                     background-size: 100%;
                 }
                 #dos{
-                    background: url('../img/circulo-2.png') no-repeat center center;
+                    background: url('../img/circulo-2-nuevo.png') no-repeat center center;
                     background-size: 100%;
                 }
                 #tres{
-                    background: url('../img/circulo-3.png') no-repeat center center;
+                    background: url('../img/circulo-3-nuevo.png') no-repeat center center;
                     background-size: 100%;
                 }
         .box-main-trivia .question{
@@ -691,7 +718,7 @@ html {
                 position: relative;
             }
                 .box-main-trivia .question label p{
-                    border: 1px solid #EA9015;
+                    border: 1px solid #BFE0DA;
                     border-radius: 10px;
                     margin: 0 auto;
                     padding: 10px;
@@ -727,9 +754,9 @@ html {
                         /*text-decoration: line-through;*/
                     }
             .message-box{
-                background-color: #ea9015;
+                background-color: #BFE0DA;
                 border-radius: 10px;
-                color: #fff;
+                color: #24292c;
                 font: 15px / 1.5 "Roboto", serif;
                 font-weight: 600;
                 margin: 0 auto 10px;
@@ -745,7 +772,7 @@ html {
                 background-color: #fff;
                 border: none;
                 border-radius: 25px;
-                color: #000; 
+                color: #24292c; 
                 cursor: pointer;          
                 display: inline-block;
                 font: 14px / 1.3 'from_where_you_areregular'; 
@@ -755,8 +782,8 @@ html {
                 text-transform: uppercase; 
             }
                 button.siguiente:hover{
-                    background-color: #EA9015;
-                    color: #fff;
+                    background-color: #BFE0DA;
+                    color: #24292c;
                 }
                 button.siguiente:disabled{
                     background-color: #c2c2c2;
@@ -815,8 +842,8 @@ html {
                     text-transform: uppercase; 
                 }
                     .box-ctn-resultado a:hover{
-                        background-color: #EA9015;
-                        color: #fff;
+                        background-color: #BFE0DA;
+                        color: #24292c;
                     }
 
         .question, 
@@ -867,11 +894,11 @@ html {
 }
     .box-lideresas h4{
         color: #8419b9;
-        font: 48px/1.3 'from_where_you_areregular'; 
+        font: 42px/1.3 "Roboto", serif;
+        font-weight: 600;
         margin: 0 auto;
         max-width: 600px;
         text-align: center;
-        text-transform: uppercase;
     }
     img.icon-seleccionar{
         display: block;
@@ -1042,7 +1069,7 @@ html {
             color: #fff;
             font: 24px/1.2 "Roboto", serif;
             font-weight: 800;
-            margin: 30px auto;
+            margin: 0 auto 30px;
             text-align: center;
         }
         .box-botones-mapas ul{
