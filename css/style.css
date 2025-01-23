@@ -892,7 +892,8 @@ html {
     position: relative;
     z-index: 20;    
 }
-    .box-lideresas h4{
+    .box-lideresas h4,
+    .box-main-comparativo h4{
         color: #8419b9;
         font: 42px/1.3 "Roboto", serif;
         font-weight: 600;
@@ -1259,6 +1260,141 @@ html {
 .box-main-monitoreo{
 
 }
+    .box-main-comparativo{
+
+    }
+        .box-main-comparativo h4{
+            max-width: 700px;
+        }
+        .box-main-comparativo p{
+            font: 17px/1.5 "Roboto", serif;
+            font-weight: 500;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        .box-comparador{
+            margin-top: 50px;
+        }
+            .box-comparador h5{
+                font: 24px/1.4 "Roboto", serif;
+                font-weight: 700;
+                margin: 0 auto 30px;
+                text-align: center;
+            }
+            #comparison { 
+                height: 60vw;
+                margin: 0 auto;
+                max-height: 600px;
+                max-width: 1024px;                
+                overflow: hidden; 
+                width: 60vw;
+            }
+                #comparison figure { 
+                    background-image: url('../img/bg-despues-1.jpg'); 
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: relative;
+                    width: 100%; 
+                    height: 100%;
+                    margin: 0; 
+                }
+                    #comparison figure > img { 
+                        position: relative;
+                        width: 100%;
+                    }
+                #comparison figure div { 
+                    background-image: url('../img/bg-antes-1.jpg'); 
+                    background-size: cover;
+                    position: absolute;
+                    width: 50%; 
+                    box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+                    overflow: hidden;
+                    bottom: 0;
+                    height: 100%;
+                    z-index: 10;
+                }            
+            input[type=range]{       
+                background-color: transparent; 
+                left: -2%;        
+                position: relative;
+                top: -50%;                 
+                width: 102%; 
+                z-index: 10;
+
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+            input[type=range]:focus { 
+                outline: none; 
+            }
+            input[type=range]:active { 
+                outline: none;  
+            }            
+            input[type=range]::-moz-range-track { 
+                -moz-appearance:none;
+                height:15px;
+                width: 98%;
+                background-color: rgba(255,255,255,0.1); 
+                position: relative;
+                outline: none;    
+            }
+            input[type=range]::active { 
+                border: none; 
+                outline: none;
+            }
+            input[type=range]::-webkit-slider-thumb {
+                background: url('../img/flechas.png') no-repeat center center;
+                background-size: 100%;
+                height: 40px;   
+                width: 40px; 
+                border-radius: 0;
+                -webkit-appearance: none;
+            }  
+            input[type=range]:focus::-webkit-slider-thumb {
+                /*background: rgba(174, 17, 17, 0.5);*/
+            }
+            input[type=range]:focus::-moz-range-thumb {
+                /*background: rgba(255,255,255,0.5);*/
+            }
+        #divisor .box-texto-foto{
+            background-color: #000;
+            background-image: none;
+            bottom: 50px;
+            box-shadow: none;
+            height: auto;
+            left: 100px;
+            padding: 20px 10px;
+            text-align: center;
+            width: 200px;
+        }
+            #divisor .box-texto-foto h6,
+            #comparison .box-texto-despues h6{
+                color: #fff;
+                font: 15px/1.4 "Roboto", serif;
+                font-weight: 700;
+                margin: 0 auto;
+                text-transform: uppercase;
+            }
+            #divisor .box-texto-foto p,
+            #comparison .box-texto-despues p{
+                color: #fff;
+                font: 15px/1.3 "Roboto", serif;
+                margin: 0 auto;
+            }
+        #comparison .box-texto-despues{
+            background-color: #000;
+            background-image: none;
+            bottom: 50px;
+            height: auto;
+            padding: 20px 10px;
+            position: absolute;
+            right: 100px;
+            text-align: center;
+            width: 200px;   
+            z-index: 2;       
+        }
+          
 
     .box-main-promesometro{
 
