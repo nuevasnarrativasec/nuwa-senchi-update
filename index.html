@@ -751,9 +751,9 @@
 
             <div class="box-comparador">
                 <h5>Niñas en un bar vs. niñas en educación</h5>
-                <div id="comparison">
+                <div class="comparison">
                     <figure>
-                        <div id="divisor">
+                        <div class="divisor">
                             <div class="box-texto-foto">
                                 <h6>antes</h6>
                                 <p>
@@ -768,7 +768,30 @@
                             </p>
                         </div>
                     </figure>
-                    <input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+                    <input type="range" min="0" max="100" value="50" class="slider">
+                </div>
+            </div>
+
+            <div class="box-comparador">
+                <h5>Niñas en un bar vs. niñas en educación</h5>
+                <div class="comparison">
+                    <figure>
+                        <div class="divisor">
+                            <div class="box-texto-foto">
+                                <h6>antes</h6>
+                                <p>
+                                    Niñas en un bar, en un contexto de vulnerabilidad.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box-texto-despues">
+                            <h6>después</h6>
+                            <p>
+                                Niñas en un bar, en un contexto de vulnerabilidad.
+                            </p>
+                        </div>
+                    </figure>
+                    <input type="range" min="0" max="100" value="50" class="slider">
                 </div>
             </div>
             
@@ -2448,12 +2471,13 @@
 
     </script>
 
-    <script>
-        var divisor = document.getElementById("divisor"),
-            slider = document.getElementById("slider");
-        function moveDivisor() { 
-            divisor.style.width = slider.value+"%";
-        }
+    <script>        
+        document.querySelectorAll('.comparison .slider').forEach(slider => {
+            slider.addEventListener('input', function () {                
+                const divisor = this.closest('.comparison').querySelector('.divisor');
+                divisor.style.width = this.value + '%';
+            });
+        });
     </script>
     
 

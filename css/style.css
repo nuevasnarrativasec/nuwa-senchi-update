@@ -1282,7 +1282,7 @@ html {
                 margin: 0 auto 30px;
                 text-align: center;
             }
-            #comparison { 
+            .comparison { 
                 height: 60vw;
                 margin: 0 auto;
                 max-height: 600px;
@@ -1290,7 +1290,7 @@ html {
                 overflow: hidden; 
                 width: 60vw;
             }
-                #comparison figure { 
+                .comparison figure { 
                     background-image: url('../img/bg-despues-1.jpg'); 
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -1299,11 +1299,11 @@ html {
                     height: 100%;
                     margin: 0; 
                 }
-                    #comparison figure > img { 
+                    .comparison figure > img { 
                         position: relative;
                         width: 100%;
                     }
-                #comparison figure div { 
+                .comparison figure div { 
                     background-image: url('../img/bg-antes-1.jpg'); 
                     background-size: cover;
                     position: absolute;
@@ -1357,7 +1357,7 @@ html {
             input[type=range]:focus::-moz-range-thumb {
                 /*background: rgba(255,255,255,0.5);*/
             }
-        #divisor .box-texto-foto{
+        .divisor .box-texto-foto{
             background-color: #000;
             background-image: none;
             bottom: 50px;
@@ -1368,21 +1368,21 @@ html {
             text-align: center;
             width: 200px;
         }
-            #divisor .box-texto-foto h6,
-            #comparison .box-texto-despues h6{
+            .divisor .box-texto-foto h6,
+            .comparison .box-texto-despues h6{
                 color: #fff;
                 font: 15px/1.4 "Roboto", serif;
                 font-weight: 700;
                 margin: 0 auto;
                 text-transform: uppercase;
             }
-            #divisor .box-texto-foto p,
-            #comparison .box-texto-despues p{
+            .divisor .box-texto-foto p,
+            .comparison .box-texto-despues p{
                 color: #fff;
                 font: 15px/1.3 "Roboto", serif;
                 margin: 0 auto;
             }
-        #comparison .box-texto-despues{
+        .comparison .box-texto-despues{
             background-color: #000;
             background-image: none;
             bottom: 50px;
