@@ -1938,6 +1938,83 @@ html {
                     font-weight: 700;
                 }
 
+.box-parallax-mapa{
+    overflow: hidden;
+}   
+    .section {
+        height: 100vh;
+        position: relative;
+        width: 100%;
+    }              
+        .block {
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;            
+            width: 100%; 
+        }        
+        #block-1 {
+            /*background-image: url('https://nuevasnarrativasec.github.io/edificio-comercio-centenario/img/bg-bloque-1.webp');*/
+            opacity: 1; 
+            z-index: 10;
+        }    
+        #block-2-mapa {
+            background-image: url('../img/mapa-2.jpg?v2');
+            z-index: 20;
+        }  
+        #block-3-mapa {
+            background-image: url('../img/mapa-3.jpg?v2');
+            z-index: 30;
+        } 
+        #block-4-mapa {            
+            position: absolute;
+            opacity: 1;
+            z-index: 40;
+            transform: translateY(100%);
+        }   
+        #block-5-mapa {            
+            position: absolute;
+            opacity: 1;
+            z-index: 50;
+            transform: translateY(100%);
+        }   
+        #block-6-mapa {
+            background-image: url('../img/mapa-4.jpg?v2');
+            z-index: 60;
+        }  
+        #block-7-mapa {
+            background-image: url('../img/mapa-5.jpg?v2');
+            z-index: 70;
+        }  
+        #block-8-mapa {
+            background-image: url('../img/mapa-6.jpg?v2');
+            z-index: 80;
+        }        
+        
+        .bloque-texto {
+            background-color: #000;
+            box-sizing: border-box;
+            left: 50%;
+            max-width: 380px;
+            padding: 30px;
+            position: absolute;            
+            top: 50%;  
+            transform: translate(-50%,-50%);  
+        }
+            .bloque-texto p{
+                font: 15px/1.5 "Roboto", sans-serif;
+                margin: 0 auto;
+            }
+            .izquierda{
+                left: 80px;
+                right: inherit;
+            }
+
+
+
 @media only screen and (max-width: 640px){
 
     .box-main-bajada h2,
