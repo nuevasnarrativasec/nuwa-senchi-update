@@ -1448,7 +1448,12 @@ html {
         #box-apu-1 h6 span{
             text-transform: none;
         }
-          
+        .box-lider {
+            display: none;
+        }
+            .box-lider.active {
+                display: block;
+            }
 
     .box-main-promesometro{
 

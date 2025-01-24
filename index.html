@@ -2575,6 +2575,7 @@
 
     </script>
 
+    <!-- slider comparador-->
     <script>        
         document.querySelectorAll('.comparison .slider').forEach(slider => {
             slider.addEventListener('input', function () {                
@@ -2582,6 +2583,58 @@
                 divisor.style.width = this.value + '%';
             });
         });
+    </script>
+
+    <!-- box apus -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const liElements = document.querySelectorAll("li[id^='apu-']");
+            const boxElements = document.querySelectorAll(".box-lider");
+            const boxMainApus = document.querySelector(".box-main-apus");
+            let currentAudio = null;
+
+            // Ocultar todos los box-apu al inicio
+            boxElements.forEach(box => box.classList.remove("active"));
+
+            // Agregar eventos a los <li> para mostrar el #box-apu correspondiente
+            liElements.forEach(li => {
+                li.addEventListener("click", () => {
+                const targetBoxId = `box-${li.id}`;
+                boxElements.forEach(box => {
+                    if (box.id === targetBoxId) {
+                    box.classList.add("active");
+                    const audio = box.querySelector("audio");
+                    if (audio) {
+                        if (currentAudio && currentAudio !== audio) {
+                        currentAudio.pause();
+                        currentAudio.currentTime = 0;
+                        }
+                        audio.play();
+                        currentAudio = audio;
+                    }
+                    } else {
+                    box.classList.remove("active");
+                    const audio = box.querySelector("audio");
+                    if (audio) {
+                        audio.pause();
+                        audio.currentTime = 0;
+                    }
+                    }
+                });
+                });
+            });
+
+            // Pausar audio si box-main-apus sale del viewport
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                if (!entry.isIntersecting && currentAudio) {
+                    currentAudio.pause();
+                }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(boxMainApus);
+            });
     </script>
     
 
