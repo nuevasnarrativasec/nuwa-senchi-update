@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v42">
+    <link rel="stylesheet" href="./css/style.css?v43">
 </head>
 <body>
 
@@ -248,6 +248,24 @@
                 <div class="bloque-texto">
                     <p>
                         La mortalidad materna en 2024 fue alarmante, con 4 muertes y una tasa de 62 por cada 100,000 nacidos vivos, muy por encima del promedio nacional.
+                    </p>
+                </div>
+            </div>
+
+            <!-- mapa 5 -->
+
+            <div class="block" id="block-19-mapa">
+ 
+            </div>
+
+            <div class="block" id="block-20-mapa">
+ 
+            </div>
+
+            <div class="block block-relative" id="block-21-mapa">
+                <div class="bloque-texto">
+                    <p>
+                        En 2024, la mortalidad materna alcanzó 4 casos y una tasa de 62 por cada 100,000 nacidos vivos, superando el promedio nacional.
                     </p>
                 </div>
             </div>
@@ -2762,7 +2780,7 @@
             new ScrollMagic.Scene({
             triggerElement: ".section",
                 triggerHook: 0,
-                duration: "1900%",
+                duration: "2200%",
             })
             .setPin(".section")
             //.addIndicators({ name: "Section Pin" }) 
@@ -3025,7 +3043,50 @@
                 })
             )
             //.addIndicators({ name: "Bloque 18 - Caja de texto" })
-            .addTo(controller); 
+            .addTo(controller);
+            
+            // Bloque 19 - Fade-in - mapa 19
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 19,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-19-mapa", { opacity: 1, duration: 1 })
+            )
+            //.addIndicators({ name: "Block 19 Fade-In" })
+            .addTo(controller);
+
+            // Bloque 20 - Fade-in - mapa 20
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 20,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-20-mapa", { opacity: 1, duration: 1 })
+            )
+            //.addIndicators({ name: "Block 20 Fade-In" })
+            .addTo(controller);
+
+             // Bloque 21 - Caja de texto 1 | mapa 5
+             new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 21,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-21-mapa", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
+            )
+            //.addIndicators({ name: "Bloque 21 - Caja de texto" })
+            .addTo(controller);
 
         });
     </script>   
