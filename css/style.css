@@ -1969,30 +1969,77 @@ html {
             background-image: url('../img/mapa-3.jpg?v2');
             z-index: 30;
         } 
-        #block-4-mapa {            
-            position: absolute;
-            opacity: 1;
-            z-index: 40;
-            transform: translateY(100%);
-        }   
-        #block-5-mapa {            
-            position: absolute;
-            opacity: 1;
-            z-index: 50;
-            transform: translateY(100%);
-        }   
-        #block-6-mapa {
+        #block-4-mapa {
             background-image: url('../img/mapa-4.jpg?v2');
-            z-index: 60;
+            z-index: 40;
         }  
-        #block-7-mapa {
+        #block-5-mapa {
             background-image: url('../img/mapa-5.jpg?v2');
-            z-index: 70;
+            z-index: 50;
         }  
-        #block-8-mapa {
+        #block-6-mapa {
             background-image: url('../img/mapa-6.jpg?v2');
+            z-index: 60;
+        }   
+        #block-7-mapa {            
+            position: absolute;
+            opacity: 1;
+            z-index: 70;
+            transform: translateY(100%);
+        }   
+        #block-8-mapa {            
+            position: absolute;
+            opacity: 1;
             z-index: 80;
-        }        
+            transform: translateY(100%);
+        }   
+        #block-9-mapa {
+            background-image: url('../img/mapa-7.jpg?v2');
+            z-index: 90;
+        } 
+        #block-10-mapa {
+            background-image: url('../img/mapa-8.jpg?v2');
+            z-index: 100;
+        } 
+        #block-11-mapa {
+            background-image: url('../img/mapa-9.jpg?v2');
+            z-index: 110;
+        } 
+        #block-12-mapa {            
+            position: absolute;
+            opacity: 1;
+            z-index: 120;
+            transform: translateY(100%);
+        }   
+        #block-13-mapa {
+            background-image: url('../img/mapa-10.jpg?v2');
+            z-index: 130;
+        } 
+        #block-14-mapa {
+            background-image: url('../img/mapa-11.jpg?v2');
+            z-index: 140;
+        } 
+        #block-15-mapa {
+            background-image: url('../img/mapa-12.jpg?v2');
+            z-index: 150;
+        } 
+        #block-16-mapa {
+            background-image: url('../img/mapa-13.jpg?v2');
+            z-index: 150;
+        } 
+        #block-17-mapa {            
+            position: absolute;
+            opacity: 1;
+            z-index: 160;
+            transform: translateY(100%);
+        } 
+        #block-18-mapa {            
+            position: absolute;
+            opacity: 1;
+            z-index: 170;
+            transform: translateY(100%);
+        }   
+             
         
         .bloque-texto {
             background-color: #000;

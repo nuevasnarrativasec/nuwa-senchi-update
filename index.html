@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v40">
+    <link rel="stylesheet" href="./css/style.css?v42">
 </head>
 <body>
 
@@ -166,7 +166,21 @@
 
             </div>
 
-            <div class="block block-relative" id="block-4-mapa">
+            <!-- mapa 2 -->
+
+            <div class="block" id="block-4-mapa">
+
+            </div>
+ 
+            <div class="block" id="block-5-mapa">
+ 
+            </div>
+ 
+            <div class="block" id="block-6-mapa">
+ 
+            </div>
+
+            <div class="block block-relative" id="block-7-mapa">
                 <div class="bloque-texto">
                     <p>
                         Los Centros de Emergencia Mujer (CEM) atendieron 346 casos de violencia sexual en 2024, 280 de estos contra niñas y adolescentes menores de 18 años.
@@ -174,7 +188,7 @@
                 </div>
             </div>
 
-            <div class="block block-relative" id="block-5-mapa">
+            <div class="block block-relative" id="block-8-mapa">
                 <div class="bloque-texto">
                     <p>
                         A pesar de ello, se estima que persiste un subregistro de casos por barreras lingüísticas, acuerdos informales y falta de acceso a servicios legales y médicos.
@@ -182,20 +196,61 @@
                 </div>
             </div>
 
-            <!-- mapa 2 -->
+            <!-- mapa 3 -->
 
-            <div class="block" id="block-6-mapa">
-
+            <div class="block" id="block-9-mapa">
+ 
             </div>
 
-            <div class="block" id="block-7-mapa">
-
+            <div class="block" id="block-10-mapa">
+ 
             </div>
 
-            <div class="block" id="block-8-mapa">
-
+            <div class="block" id="block-11-mapa">
+ 
             </div>
 
+            <div class="block block-relative" id="block-12-mapa">
+                <div class="bloque-texto">
+                    <p>
+                        El Consejo de Mujeres Awajún registra de 3 a 5 casos diarios de violencia, sumando hasta 1,825 al año.
+                    </p>
+                </div>
+            </div>
+
+            <!-- mapa 4 -->
+
+            <div class="block" id="block-13-mapa">
+ 
+            </div>
+
+            <div class="block" id="block-14-mapa">
+ 
+            </div>
+
+            <div class="block" id="block-15-mapa">
+ 
+            </div>
+
+            <div class="block" id="block-16-mapa">
+ 
+            </div>
+
+            <div class="block block-relative" id="block-17-mapa">
+                <div class="bloque-texto">
+                    <p>
+                        En el 2024, el 14.5% de las adolescentes entre 15 y 19 años quedaron embarazadas (556 casos), debido a la violencia sexual, la falta de educación sexual y carencia de servicios de salud.
+                    </p>
+                </div>
+            </div>
+
+            <div class="block block-relative" id="block-18-mapa">
+                <div class="bloque-texto">
+                    <p>
+                        La mortalidad materna en 2024 fue alarmante, con 4 muertes y una tasa de 62 por cada 100,000 nacidos vivos, muy por encima del promedio nacional.
+                    </p>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -2707,7 +2762,7 @@
             new ScrollMagic.Scene({
             triggerElement: ".section",
                 triggerHook: 0,
-                duration: "900%",
+                duration: "1900%",
             })
             .setPin(".section")
             //.addIndicators({ name: "Section Pin" }) 
@@ -2756,9 +2811,8 @@
             )
             //.addIndicators({ name: "Block 3 Fade-In" })
             .addTo(controller);  
-            
 
-            // Bloque 4 - Caja de texto 1 | mapa 1
+            // Bloque 4 - Fade-in - mapa 4
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
@@ -2766,16 +2820,12 @@
                 duration: window.innerHeight,
             })
             .setTween(
-                gsap.to("#block-4-mapa", {
-                    opacity: 1,
-                    y: "-100%", 
-                    duration: 1,
-                })
+                gsap.to("#block-4-mapa", { opacity: 1, duration: 1 })
             )
-            //.addIndicators({ name: "Bloque 4 - Caja de texto" })
-            .addTo(controller);
+            //.addIndicators({ name: "Block 6 Fade-In" })
+            .addTo(controller);  
 
-            // Bloque 5 - Caja de texto 2 | mapa 1
+            // Bloque 5 - Fade-in - mapa 5
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
@@ -2783,16 +2833,12 @@
                 duration: window.innerHeight,
             })
             .setTween(
-                gsap.to("#block-5-mapa", {
-                    opacity: 1,
-                    y: "-100%", 
-                    duration: 1,
-                })
+                gsap.to("#block-5-mapa", { opacity: 1, duration: 1 })
             )
-            //.addIndicators({ name: "Bloque 5 - Caja de texto" })
-            .addTo(controller);            
+            //.addIndicators({ name: "Block 7 Fade-In" })
+            .addTo(controller); 
 
-            // Bloque 6 - Fade-in - mapa 4
+            // Bloque 6 - Fade-in - mapa 6
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
@@ -2802,10 +2848,10 @@
             .setTween(
                 gsap.to("#block-6-mapa", { opacity: 1, duration: 1 })
             )
-            //.addIndicators({ name: "Block 6 Fade-In" })
-            .addTo(controller);  
+            //.addIndicators({ name: "Block 8 Fade-In" })
+            .addTo(controller);             
 
-            // Bloque 7 - Fade-in - mapa 5
+            // Bloque 7 - Caja de texto 1 | mapa 2
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
@@ -2813,12 +2859,16 @@
                 duration: window.innerHeight,
             })
             .setTween(
-                gsap.to("#block-7-mapa", { opacity: 1, duration: 1 })
+                gsap.to("#block-7-mapa", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
             )
-            //.addIndicators({ name: "Block 7 Fade-In" })
-            .addTo(controller); 
+            //.addIndicators({ name: "Bloque 7 - Caja de texto" })
+            .addTo(controller);
 
-            // Bloque 8 - Fade-in - mapa 6
+            // Bloque 8 - Caja de texto 2 | mapa 2
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
@@ -2826,12 +2876,156 @@
                 duration: window.innerHeight,
             })
             .setTween(
-                gsap.to("#block-8-mapa", { opacity: 1, duration: 1 })
+                gsap.to("#block-8-mapa", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
             )
-            //.addIndicators({ name: "Block 8 Fade-In" })
+            //.addIndicators({ name: "Bloque 8 - Caja de texto" })
+            .addTo(controller);   
+            
+            // Bloque 9 - Fade-in - mapa 9
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 9,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-9-mapa", { opacity: 1, duration: 1 })
+            )
+            //.addIndicators({ name: "Block 9 Fade-In" })
+            .addTo(controller);  
+
+            // Bloque 10 - Fade-in - mapa 10
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 10,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-10-mapa", { opacity: 1, duration: 1 })
+            )
+            //.addIndicators({ name: "Block 10 Fade-In" })
+            .addTo(controller); 
+            
+            // Bloque 11 - Fade-in - mapa 11
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 11,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-11-mapa", { opacity: 1, duration: 1 })
+            )
+            //.addIndicators({ name: "Block 11 Fade-In" })
             .addTo(controller); 
 
+            // Bloque 12 - Caja de texto 1 | mapa 3
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 12,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-12-mapa", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
+            )
+            //.addIndicators({ name: "Bloque 12 - Caja de texto" })
+            .addTo(controller);   
 
+            // Bloque 13 - Fade-in - mapa 13
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 13,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-13-mapa", { opacity: 1, duration: 1 })
+            )
+            //.addIndicators({ name: "Block 13 Fade-In" })
+            .addTo(controller); 
+            
+            // Bloque 14 - Fade-in - mapa 14
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 14,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-14-mapa", { opacity: 1, duration: 1 })
+            )
+            //.addIndicators({ name: "Block 14 Fade-In" })
+            .addTo(controller);
+
+            // Bloque 15 - Fade-in - mapa 15
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 15,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-15-mapa", { opacity: 1, duration: 1 })
+            )
+            //.addIndicators({ name: "Block 15 Fade-In" })
+            .addTo(controller);
+
+            // Bloque 16 - Fade-in - mapa 16
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 16,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-16-mapa", { opacity: 1, duration: 1 })
+            )
+            //.addIndicators({ name: "Block 16 Fade-In" })
+            .addTo(controller);
+
+            // Bloque 17 - Caja de texto 1 | mapa 4
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 17,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-17-mapa", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
+            )
+            //.addIndicators({ name: "Bloque 17 - Caja de texto" })
+            .addTo(controller); 
+            
+            // Bloque 18 - Caja de texto 2 | mapa 4
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 18,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-18-mapa", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
+            )
+            //.addIndicators({ name: "Bloque 18 - Caja de texto" })
+            .addTo(controller); 
 
         });
     </script>   
