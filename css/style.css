@@ -229,7 +229,8 @@ html {
     }
         .box-texto-morado h3{
             color: #fff;
-            font: 48px/1.3 'from_where_you_areregular';
+            font: 48px/1.2 "Roboto", serif;
+            font-weight: 600;
             margin: 0 auto;
             max-width: 340px;
             text-align: center;
