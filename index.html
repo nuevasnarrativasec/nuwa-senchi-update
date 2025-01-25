@@ -485,7 +485,7 @@
                         <span>(intérprete)</span>
                     </h6>
                     <audio controls>
-                        <source src="https://traffic.omny.fm/d/clips/8b642147-25e1-44dd-9991-adad01233795/b5ee26de-6535-48db-ae6a-ae7601894a37/49036760-1182-4cca-a567-b04c013f95e7/audio.mp3" type="audio/mpeg" />
+                        <source src="./audio/carmen-samaniego.mp3" type="audio/mpeg" />
                     </audio>
                 </div>
             </div>
@@ -514,7 +514,7 @@
                         <span>(defensora comunitaria)</span>
                     </h6>
                     <audio controls>
-                        <source src="https://traffic.omny.fm/d/clips/8b642147-25e1-44dd-9991-adad01233795/b5ee26de-6535-48db-ae6a-ae7601894a37/49036760-1182-4cca-a567-b04c013f95e7/audio.mp3" type="audio/mpeg" />
+                        <source src="./audio/gaby-tseje.mp3" type="audio/mpeg" />
                     </audio>
                 </div>
             </div>
@@ -543,7 +543,7 @@
                         <span>(lideresa)</span>
                     </h6>
                     <audio controls>
-                        <source src="https://traffic.omny.fm/d/clips/8b642147-25e1-44dd-9991-adad01233795/b5ee26de-6535-48db-ae6a-ae7601894a37/49036760-1182-4cca-a567-b04c013f95e7/audio.mp3" type="audio/mpeg" />
+                        <source src="./audio/silvia-shimbuka.mp3" type="audio/mpeg" />
                     </audio>
                 </div>
             </div>
@@ -572,7 +572,7 @@
                         <span>(lideresa)</span>
                     </h6>
                     <audio controls>
-                        <source src="https://traffic.omny.fm/d/clips/8b642147-25e1-44dd-9991-adad01233795/b5ee26de-6535-48db-ae6a-ae7601894a37/49036760-1182-4cca-a567-b04c013f95e7/audio.mp3" type="audio/mpeg" />
+                        <source src="./audio/rossmery-pioc.mp3" type="audio/mpeg" />
                     </audio>
                 </div>
             </div>
@@ -604,7 +604,7 @@
                         <span>(psicóloga brigadista)</span>
                     </h6>
                     <audio controls>
-                        <source src="https://traffic.omny.fm/d/clips/8b642147-25e1-44dd-9991-adad01233795/b5ee26de-6535-48db-ae6a-ae7601894a37/49036760-1182-4cca-a567-b04c013f95e7/audio.mp3" type="audio/mpeg" />
+                        <source src="./audio/sharon-alberca.mp3" type="audio/mpeg" />
                     </audio>
                 </div>
             </div>
@@ -2360,36 +2360,30 @@
     <!-- lideresas -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-           
             const buttons = document.querySelectorAll('li[id^="btn-lider"]');
-           
+            const liderBoxes = document.querySelectorAll('.box-lider');
+            const lideresasContainer = document.querySelector('.box-lideresas');
+
+            // Función para manejar clics en los botones
             buttons.forEach(button => {
                 button.addEventListener('click', () => {
-                   
                     const buttonId = button.id;
-
-                   
                     const liderNumber = buttonId.split('-').pop();
 
-                    
-                    document.querySelectorAll('.box-lider').forEach(box => {
-                        
+                    // Pausar todos los audios y ocultar los box-lider
+                    liderBoxes.forEach(box => {
                         const audio = box.querySelector('audio');
                         if (audio) {
                             audio.pause();
-                            audio.currentTime = 0; 
+                            audio.currentTime = 0;
                         }
-
-                        
                         box.style.display = 'none';
                     });
 
-                    
+                    // Mostrar el box correspondiente y hacer scroll
                     const correspondingBox = document.getElementById(`box-lider-${liderNumber}`);
                     if (correspondingBox) {
                         correspondingBox.style.display = 'block';
-
-                        
                         correspondingBox.scrollIntoView({
                             behavior: 'smooth',
                             block: 'start',
@@ -2397,8 +2391,26 @@
                     }
                 });
             });
-        });
 
+            // Configurar el IntersectionObserver para .box-lideresas
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) {
+                        // Pausar todos los audios cuando .box-lideresas salga del viewport
+                        liderBoxes.forEach(box => {
+                            const audio = box.querySelector('audio');
+                            if (audio && !audio.paused) {
+                                audio.pause();
+                            }
+                        });
+                    }
+                });
+            });
+
+            if (lideresasContainer) {
+                observer.observe(lideresasContainer);
+            }
+        });
     </script>
 
     <!-- scroll video -->
