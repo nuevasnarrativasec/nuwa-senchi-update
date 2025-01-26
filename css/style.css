@@ -2076,6 +2076,41 @@ html {
                 right: inherit;
             }
 
+.box-main-conexiones{
+
+}
+
+    #container-conexiones {
+        height: 500px;
+        min-width: 320px;
+        margin: 80px auto 40px;
+        max-width: 800px;    
+    }
+    .box-main-conexiones p {
+        font: 17px / 1.5 "Roboto", serif;
+        margin: 0 auto 20px;
+        max-width: 490px;
+    }
+    #custom-popup{
+
+    }
+        #custom-popup h6{
+            font: 17px/1.5 "Roboto", serif;
+            font-weight: 700;
+            margin: 0 auto;
+        }
+        #custom-popup p{
+            font: 15px/1.3 "Roboto", serif;
+            margin: 5px auto;
+        }
+        #close-popup{
+            background-color: #c2c2c2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font: 15px/1.3 "Roboto", serif;
+            padding: 5px 10px;
+        }
 
 
 @media only screen and (max-width: 640px){

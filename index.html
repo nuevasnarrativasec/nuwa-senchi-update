@@ -1808,6 +1808,17 @@
 
         </div>
 
+        <div class="box-main-conexiones">
+            <div id="container-conexiones"></div>
+
+            <p>
+                En el Amazonas, lideresas Awajún como Rossmery Pioc y Carmen Samaniego tejen una red de esperanza y cambio, promoviendo la equidad y combatiendo la violencia contra niñas y mujeres. Desde el Consejo de Mujeres y como intérprete del UNFPA, respectivamente, impulsan encuentros, servicios transformadores y alianzas que conectan a mujeres con oportunidades y recursos. Junto a lideresas como Sharon Alberca y Silvia Shimbuka, trabajan por el empoderamiento económico y social, mientras los Apus, sensibilizados, se convierten en aliados. 
+            </p>
+            <p>
+                Esta red fomenta la denuncia, reduce la tolerancia al abuso y proyecta un futuro donde las generaciones crecen con modelos femeninos de liderazgo y valores renovados. Según proyecciones realizadas por ECData con un modelo en R -que considera variables como la participación femenina en liderazgo, programas educativos sobre igualdad, colaboración con instituciones como el UNFPA, acceso a apoyo psicológico para víctimas y la judicialización de casos de violencia-, en cinco años las comunidades Awajún podrían reducir significativamente la violencia de género. A diez años, con estrategias educativas y alianzas fortalecidas, estas comunidades podrían convertirse en un ejemplo nacional de transformación sostenible y justicia social. 
+            </p>
+        </div>
+
     </div>
 
     <div class="box-footer-mariposas">
@@ -1864,6 +1875,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales-multimedia/puerto-de-chancay/js/animation.gsap.js"></script>
     <script src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales/el-metro-interminable-ecpm/js/debug.addIndicators.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/networkgraph.js"></script>
+
 
     <!-- compartir -->
     <script>
@@ -3102,6 +3116,155 @@
 
         });
     </script>   
+
+    <!-- mapa conexiones -->
+    <script>
+        var celticColor = "#7becb2",
+            italicColor = "#ecb27b",
+            indoIranianColor = "#ec7bb6";
+
+        // Define custom data for each node
+        var customData = {
+            'Rossmery Pioc': 'Desde el Consejo de Mujeres, articula lideresas y proyectos, conectando denuncias, educación y empoderamiento para expandir la batalla contra la violencia.',
+            'Carmen Samaniego': 'Conecta comunidades con servicios esenciales del UNFPA, facilitando el acceso a derechos y construyendo redes que fortalezcan la comunidad.',
+            'Gaby Tseje': 'Comparte su experiencia para empoderar económicamente a mujeres, conectándolas con iniciativas que las liberan de la dependencia y el abuso.',
+            'Silvia Shimbuka': 'Se une a través de talleres comunitarios, generando ingresos y mostrando que el emprendimiento puede ser la base de una vida libre de violencia.',
+            'Sharon Alberca': 'Construye confianza emocional en las sobrevivientes y conecta a las lideresas con herramientas psicológicas que fortalecen la red de apoyo.',
+            'Apoyo del UNFPA': 'Une a todas las lideresas con programas de derechos, salud y capacitación, funcionando como el motor que da fuerza a cada nodo del mapa.',
+            'Consejo de Mujeres': 'Es el epicentro de las conexiones, donde se reúnen denuncias, se planifican acciones y se expande el impacto a nuevas comunidades.',
+            'Empoderamiento económico': 'Une a las lideresas a través de proyectos sostenibles, brindando independencia y consolidando un camino para salir del ciclo de violencia.',
+            'Sensibilización de Apus' : 'Involucra a los líderes tradicionales, quienes se suman como aliados en el cambio cultural, conectando tradición con nuevas normas de respeto.',
+            'Educación respetuosa' : 'Une a las generaciones jóvenes con valores de igualdad, sembrando un impacto a largo plazo que respalda los esfuerzos de las lideresas.',
+            'Red de lideresas' : 'Une a mujeres organizadas para compartir experiencias, recursos y estrategias, multiplicando el impacto colectivo en sus comunidades.',
+            'Reducción de violencia' : 'El resultado compartido de cada esfuerzo, conectando educación, empoderamiento y acciones colectivas para transformar comunidades de manera sostenible.'
+        };
+
+        Highcharts.chart('container-conexiones', {
+
+        chart: {
+            type: 'networkgraph',
+            marginTop: 80
+        },
+
+        title: {
+            text: 'Mapa de conexiones y predicciones - <br> ramificaciones de lo que se puede conseguir.'
+        },
+
+        subtitle: {
+            text: ''
+        },
+
+        plotOptions: {
+            networkgraph: {
+            keys: ['from', 'to'],
+            layoutAlgorithm: {
+                enableSimulation: true,
+                integration: 'verlet',
+                linkLength: 100
+            },
+            point: {
+                events: {
+                click: function () {
+                    var existingPopup = document.getElementById('custom-popup');
+                    if (existingPopup) {
+                    document.body.removeChild(existingPopup);
+                    }
+
+                    var popup = document.createElement('div');
+                    popup.id = 'custom-popup';
+                    popup.style.position = 'fixed';
+                    popup.style.background = '#fff';
+                    popup.style.border = '1px solid #ccc';
+                    popup.style.padding = '20px';
+                    popup.style.borderRadius = '5px';
+                    popup.style.width = '300px';
+                    popup.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
+                    popup.style.left = '50%';
+                    popup.style.top = '50%';
+                    popup.style.transform = 'translate(-50%, -50%)';
+                    popup.style.zIndex = '1000';
+                    popup.innerHTML = `
+                    <h6>${this.name}</h6>
+                    <p>${customData[this.name] || 'No additional information available.'}</p>
+                    <br>
+                    <button id="close-popup">cerrar</button>
+                    `;
+                    document.body.appendChild(popup);
+
+                    document.getElementById('close-popup').addEventListener('click', function () {
+                    document.body.removeChild(popup);
+                    });
+                }
+                }
+            }
+            }
+        },
+
+        series: [{
+            marker: {
+                radius: 20,
+            },
+            dataLabels: {
+                enabled: true,
+                linkFormat: '',
+                allowOverlap: true
+            },
+            data: [
+                ['Red de lideresas', 'Empoderamiento económico'],
+                ['Red de lideresas', 'Educación respetuosa'],
+                ['Red de lideresas', 'Reducción de violencia'],
+                ['Reducción de violencia', 'Sensibilización de Apus'],
+                ['Sensibilización de Apus', 'Sharon Alberca'],
+                ['Sharon Alberca', 'Reducción de violencia'],
+                ['Educación respetuosa', 'Rossmery Pioc'],
+                ['Rossmery Pioc', 'Carmen Samaniego'],
+                ['Apoyo del UNFPA', 'Red de lideresas'],
+                ['Apoyo del UNFPA', 'Carmen Samaniego'],
+                ['Consejo de Mujeres', 'Red de lideresas'],
+                ['Consejo de Mujeres', 'Rossmery Pioc'],
+                ['Empoderamiento económico', 'Silvia Shimbuka'],
+                ['Empoderamiento económico', 'Gaby Tseje']
+            ],
+            nodes: [{
+                id: 'Gaby Tseje',
+                color: '#6d007d'
+            },{
+                id: 'Silvia Shimbuka',
+                color: '#6d007d'
+            },{
+                id: 'Rossmery Pioc',
+                color: '#6d007d'
+            },{
+                id: 'Carmen Samaniego',
+                color: '#6d007d'
+            },{
+                id: 'Empoderamiento económico',
+                color: '#e9a425'
+            }, {
+                id: 'Red de lideresas',
+                color: '#477f1e'
+            }, {
+                id: 'Consejo de Mujeres',
+                color: '#477f1e'
+            }, {
+                id: 'Apoyo del UNFPA',
+                color: '#477f1e'
+            }, {
+                id: 'Educación respetuosa',
+                color: '#e9a425'
+            },{
+                id: 'Reducción de violencia',
+                color: '#e9a425'
+            },{
+                id: 'Sensibilización de Apus',
+                color: '#e9a425'
+            },{
+                id: 'Sharon Alberca',
+                color: '#6d007d'
+            }]
+        }]
+        });
+    </script>
     
 
 </body>
