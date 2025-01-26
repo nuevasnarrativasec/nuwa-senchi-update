@@ -15,11 +15,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v45">
+    <link rel="stylesheet" href="./css/style.css?v48">
 </head>
 <body>
 
-    <!--<div class="box-layer-audio">
+    <div class="box-layer-audio">
         <div class="ctn-layer-audio">
             <img src="./img/audio-icon-2.png" alt="" width="100%" id="audio-icon">
             <p>
@@ -27,7 +27,7 @@
             </p>
             <span id="cerrar-layer-audio">cerrar</span>
         </div>
-    </div>-->
+    </div>
 
     <div id="social">
         <button id="fb" class="sharer button" data-sharer="facebook" data-hashtag="" data-url="#">Facebook</button>
@@ -37,14 +37,14 @@
         <button id="tw" class="sharer button" data-sharer="twitter" data-title="El Comercio" data-hashtags="" data-via="elcomercio_peru" data-url="#">Twitter</button>
     </div>
 
-    <!--<div class="box-controles-audio">
+    <div class="box-controles-audio">
         <audio id="track">
             <source src="./audio/audio-test-video-scroll.mp3" type="audio/mpeg">
         </audio>
         <div id="player-container-main">
             <div id="play-pause-main" class="play-main">Play</div>
         </div>
-    </div>-->
+    </div>
 
     <div class="main-portada">
         <img src="./img/flecha-bajar.png" alt="" width="100%" class="flecha-bajar">
@@ -2068,7 +2068,7 @@
 
 
             // zoom al mapa ubicador
-            var zoomMapa = TweenMax.to("#mapa", 1, {scale: 4, ease: Circ.EaseIn});   
+            /*var zoomMapa = TweenMax.to("#mapa", 1, {scale: 4, ease: Circ.EaseIn});   
 
             var zoomMapa = new ScrollMagic.Scene({
                 triggerElement: ".box-mapa", 
@@ -2079,7 +2079,7 @@
             .setClassToggle('#mapa', 'showing')
             .setTween(zoomMapa)
             //.addIndicators({name: 'zoom mapa'})
-            .addTo(controller);
+            .addTo(controller);*/
 
 
             // mariposa rota     
@@ -2430,104 +2430,122 @@
     <!-- scroll video -->
     <script>
         function setupVideoScroll(options = {}) {
-            const {
-                videoId = "myVideo",
-                containerId = "videoContainer",
-                speed = 500,
-                triggerHook = 0,
-                duration = "1000%",
-                controller = new ScrollMagic.Controller()
-            } = options;
+        const {
+            videoId = "myVideo",
+            containerId = "videoContainer",
+            speed = 100,
+            triggerHook = 0,
+            duration = 133200, // Duración fija en píxeles
+            controller = new ScrollMagic.Controller()
+        } = options;
 
-            // Obtener elementos
-            const video = document.getElementById(videoId);
-            const container = document.getElementById(containerId);
+        // Obtener elementos
+        const video = document.getElementById(videoId);
+        const container = document.getElementById(containerId);
 
-            // Asegurarse de que el video está completamente cargado
-            const ensureVideoLoaded = () => {
-                if (video.readyState === 4) { // readyState 4 significa que el video está completamente cargado
-                    container.style.height = (video.duration * speed) + 'px';
-                    return true;
-                }
-                setTimeout(ensureVideoLoaded, 100); // Intentar nuevamente en 100ms
-            };
+        // Variable para evitar actualizaciones frecuentes
+        let lastTime = 0;
 
-            video.addEventListener('loadedmetadata', ensureVideoLoaded);
+        // Asegurarse de que el video está completamente cargado
+        const ensureVideoLoaded = () => {
+            if (video.readyState === 4) { // readyState 4 significa que el video está completamente cargado
+                container.style.height = (video.duration * speed) + 'px';
+                return true;
+            }
+            setTimeout(ensureVideoLoaded, 100); // Intentar nuevamente en 100ms
+        };
 
-            // Reproducir el video en base al scroll, solo si la duración está lista
-            const playVideo = () => {
-                if (video.duration > 0) {  // Verificar si la duración del video es válida
-                    const scrollY = window.scrollY;
-                    const height = document.documentElement.scrollHeight - window.innerHeight;
+        video.addEventListener('loadedmetadata', ensureVideoLoaded);
 
-                    const percentage = scrollY / height;
-                    const currentTime = video.duration * percentage;
+        // Sincronizar el video con el scroll
+        const playVideo = () => {
+            const scrollY = window.scrollY;
+            const height = document.documentElement.scrollHeight - window.innerHeight;
+            const percentage = scrollY / height;
+            const currentTime = video.duration * percentage;
 
-                    // Validar que currentTime es un número finito y dentro del rango
-                    if (!isNaN(currentTime) && currentTime >= 0 && currentTime <= video.duration) {
-                        video.currentTime = currentTime;
+            // Actualizar solo si el tiempo cambió significativamente
+            if (!isNaN(currentTime) && Math.abs(currentTime - lastTime) > 0.1 && currentTime >= 0 && currentTime <= video.duration) {
+                video.currentTime = currentTime;
+                lastTime = currentTime;
+            }
+
+            window.requestAnimationFrame(playVideo);
+        };
+
+        // Usar requestAnimationFrame para optimizar el evento de scroll
+        let ticking = false;
+        const onScroll = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    playVideo();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        // Configurar ScrollMagic Scene
+        document.addEventListener("DOMContentLoaded", () => {
+            const mainPortadaVideo = document.getElementById('main-portada-video');
+            const audioTrack = document.getElementById('track');
+
+            const scene = new ScrollMagic.Scene({
+                triggerElement: `#${containerId}`,
+                triggerHook: triggerHook,
+                duration: duration,
+            })
+                .setPin(`#${containerId}`)
+                //.addIndicators({ name: "video scroll" }) // Habilita si necesitas depuración
+                .on("start", () => {
+                    if (!mainPortadaVideo.muted) {
+                        mainPortadaVideo.muted = true;
                     }
-                }
 
-                window.requestAnimationFrame(playVideo);
-            };
-
-            document.addEventListener("DOMContentLoaded", () => { 
-                const mainPortadaVideo = document.getElementById('main-portada-video');
-                const audioTrack = document.getElementById('track');
-
-                // Configurar ScrollMagic Scene
-                const scene = new ScrollMagic.Scene({
-                    triggerElement: `#${containerId}`,
-                    triggerHook: triggerHook,
-                    duration: duration,
+                    if (audioTrack && !audioTrack.paused) {
+                        audioTrack.play();
+                    }
                 })
-                    .setPin(`#${containerId}`)
-                    //.addIndicators({ name: "video scroll" })
-                    .on("start", () => {
-                        // Al inicio de la escena, mutear el video de portada
-                        if (!mainPortadaVideo.muted) {
-                            mainPortadaVideo.muted = true;
-                        }
+                .on("end", () => {
+                    const pinSpacer = document.querySelector('.scrollmagic-pin-spacer');
+                    if (pinSpacer) {
+                        pinSpacer.classList.add('adjust-height');
+                    }
 
-                        // Verificar el estado del control general antes de reproducir el audio
-                        if (isAudioEnabled && audioTrack.paused) {
-                            audioTrack.play();
-                        }
-                    })
-                    .on("end", () => {
-                        // Cuando la escena termine, ajustar la altura y pausar el audio
-                        const pinSpacer = document.querySelector('.scrollmagic-pin-spacer');
-                        if (pinSpacer) {
-                            pinSpacer.classList.add('adjust-height'); // Clase personalizada
-                        }
-
-                        // Detener el audio solo si está reproduciéndose
-                        if (!audioTrack.paused) {
-                            audioTrack.pause();
-                            audioTrack.currentTime = 0; // Reiniciar el audio al inicio
-                        }
-                    })
-                    .addTo(controller);
-
-            });
-            
-
-            // Adjuntar evento de scroll para sincronizar el video
-            window.addEventListener("scroll", playVideo);
-        }
-
-        // Uso de la función
-        setupVideoScroll({
-            videoId: "myVideo",
-            containerId: "videoContainer",
-            speed: 500,
-            triggerHook: 0,
-            duration: "1000%"
+                    if (audioTrack && !audioTrack.paused) {
+                        audioTrack.pause();
+                        audioTrack.currentTime = 0;
+                    }
+                })
+                .addTo(controller);
         });
 
+        // Usar IntersectionObserver para optimizar reproducción solo cuando el contenedor es visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    window.addEventListener("scroll", onScroll);
+                } else {
+                    window.removeEventListener("scroll", onScroll);
+                }
+            });
+        }, { threshold: 0.1 });
 
+        observer.observe(container);
 
+        // Reproducir el video una vez que se carga completamente
+        video.muted = true; // Silenciar el video para mejorar el rendimiento
+        window.requestAnimationFrame(playVideo);
+    }
+
+    // Uso de la función
+    setupVideoScroll({
+        videoId: "myVideo",
+        containerId: "videoContainer",
+        speed: 100,
+        triggerHook: 0,
+        duration: 133200
+    });
 
     </script>
 
