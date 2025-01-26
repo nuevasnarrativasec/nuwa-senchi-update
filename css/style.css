@@ -1889,6 +1889,16 @@ html {
                 transform: translate(-50%,0%);
                 top: 10%;
             }
+            #mariposa-footer-4{                
+                left: 60%;
+                transform: translate(-50%,0%);
+                top: 35%;
+            }
+            #mariposa-footer-5{                
+                left: 40%;
+                transform: translate(-50%,0%);
+                top: 35%;
+            }
         .box-mensaje-footer{
             background-color: #fff;
             border-radius: 120px;
