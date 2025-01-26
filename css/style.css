@@ -2227,6 +2227,12 @@ p.parrafo-cierre{
     #mariposa-footer-3{
         left: 85%;
     }
+    #mariposa-footer-4{
+        left: 70%;
+    }
+    #mariposa-footer-5{
+        left: 20%;
+    }
 
     .box-botones-mapas {
         margin-bottom: 30px;
@@ -2350,6 +2356,7 @@ p.parrafo-cierre{
     }
 
     .comparison{
+        height: 360px;
         width: 320px;
     }
     .divisor .box-texto-foto{
@@ -2361,6 +2368,12 @@ p.parrafo-cierre{
         padding: 2px 0 0 0;
         text-align: left;
     }
+    .comparison figure{
+        background-position: -100px top;
+    }
+    .comparison figure div{
+        background-position: -200px top;
+    }
     .comparison .box-texto-despues{
         bottom: 10px;
         right: 10px;
@@ -2369,6 +2382,14 @@ p.parrafo-cierre{
     .comparison .box-texto-despues p{
         padding: 2px 0 0 0;
         text-align: right;
+    }
+    .box-main-apus h4{
+        font-size: 32px;
+    }
+    .box-main-apus p,
+    .box-main-conexiones p,
+    p.parrafo-cierre{
+        padding: 0 20px;
     }
 
 }
