@@ -2157,7 +2157,7 @@ p.parrafo-cierre{
         font-size: 2.5rem;
     }
     .box-contexto{
-        padding: 0 20px 60px;
+        padding: 60px 20px 60px;
     }
     .box-titular{
         width: 90%;
@@ -2240,6 +2240,10 @@ p.parrafo-cierre{
     .info-mapa{
         margin: 40px auto 0;
         padding: 0 20px;
+        text-align: center;
+    }
+    .box-texto-mapa{
+        text-align: left;
     }
     .box-botones-mapa-zonas{
         float: none;
@@ -2323,9 +2327,7 @@ p.parrafo-cierre{
             opacity: 0;
             width: 0;
         }
-    }
-    
-
+    }  
 
     .box-info-proyecto p{
         margin: 0 10px;
@@ -2337,6 +2339,36 @@ p.parrafo-cierre{
 
     .box-footer-mariposas{
         overflow: hidden;
+    }
+
+    .bloque-texto{
+        width: 100%;
+    }
+
+    .box-main-comparativo p{
+        padding: 0 20px;
+    }
+
+    .comparison{
+        width: 320px;
+    }
+    .divisor .box-texto-foto{
+        bottom: 10px;
+        left: 10px;
+        text-align: left;
+    }
+    .divisor .box-texto-foto p{
+        padding: 2px 0 0 0;
+        text-align: left;
+    }
+    .comparison .box-texto-despues{
+        bottom: 10px;
+        right: 10px;
+        text-align: right;
+    }
+    .comparison .box-texto-despues p{
+        padding: 2px 0 0 0;
+        text-align: right;
     }
 
 }
