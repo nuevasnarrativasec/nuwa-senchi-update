@@ -2786,7 +2786,7 @@
             let currentAudio = null;
 
             // Ocultar todos los box-apu al inicio
-            boxElements.forEach(box => box.classList.remove("active"));
+            boxElements.forEach(box => box.classList.remove("active-lider"));
 
             // Agregar eventos a los <li> para mostrar el #box-apu correspondiente
             liElements.forEach(li => {
@@ -2794,7 +2794,7 @@
                 const targetBoxId = `box-${li.id}`;
                 boxElements.forEach(box => {
                     if (box.id === targetBoxId) {
-                    box.classList.add("active");
+                    box.classList.add("active-lider");
                     const audio = box.querySelector("audio");
                     if (audio) {
                         if (currentAudio && currentAudio !== audio) {
@@ -2805,7 +2805,7 @@
                         currentAudio = audio;
                     }
                     } else {
-                    box.classList.remove("active");
+                    box.classList.remove("active-lider");
                     const audio = box.querySelector("audio");
                     if (audio) {
                         audio.pause();

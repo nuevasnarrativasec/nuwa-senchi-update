@@ -1486,7 +1486,7 @@ html {
         .box-lider {
             display: none;
         }
-            .box-lider.active {
+            .box-lider.active-lider {
                 display: block;
             }
 
