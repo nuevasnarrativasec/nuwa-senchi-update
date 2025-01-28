@@ -170,7 +170,7 @@ html {
     position: relative;
 }
     .main-portada video{
-        object-fit: contain;
+        object-fit: cover;
     }
     img.flecha-bajar{
         bottom: 50px;
