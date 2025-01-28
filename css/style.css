@@ -1365,7 +1365,7 @@ html {
                 width: 102%; 
                 z-index: 10;
 
-                -webkit-appearance: none;
+                -webkit-appearance:unset;
                 -moz-appearance: none;
             }
             input[type=range]:focus { 
@@ -2209,6 +2209,10 @@ p.parrafo-cierre{
 
 
 @media only screen and (max-width: 640px){
+
+    .ctn-layer-audio{
+        width: 90%;
+    }
 
     .box-main-bajada h2,
     .box-main-bajada p,
