@@ -132,22 +132,27 @@
 
     <div class="main-audio">
         <img src="./img/mariposa-verde-grande.webp" alt="" width="100%" class="mariposa-verde-grande">
-        <img src="./img/mariposa-audio.png" alt="" class="mariposa-audio">
+        <div class="ctn-player-container">
+            <div id="player-container-wika">
+                <div id="play-pause-wika" class="play">Play</div>
+            </div> 
+        </div>
+               
         <div class="ctn-main-audio">            
             <h3>
                 wika antunjame
             </h3>
             <div class="box-audio">                
-                <div class="ctn-audio">
-                    <p>yo te escucho</p>    
+                <div class="ctn-audio">                    
                     <audio id="track-wika">
                         <source src="./audio/audio-yo-te-escucho.mp3" type="audio/mp3" />
-                    </audio>                      
-                    <div id="player-container-wika">
-                        <div id="play-pause-wika" class="play">Play</div>
-                    </div>            
+                    </audio>             
                 </div>
             </div>
+            <div class="ctn-texto-traducido">
+                <p>yo te escucho</p>    
+            </div>
+            
         </div>        
     </div>
 
@@ -620,23 +625,24 @@
         </div>
 
         <div class="main-audio">  
-            <img src="./img/mariposa-audio.png" alt="" class="mariposa-audio">
+            <div class="ctn-player-container">
+                <div id="player-container-mapas">
+                    <div id="play-pause-mapas" class="play">Play</div>
+                </div>    
+            </div>
             <div class="ctn-main-audio">       
                 <h3 style="max-width: 600px;">
                     wika <br> dekaskeapi tajai
                 </h3>
                 <div class="box-audio">
-                    <div class="ctn-audio">
-                        <p>yo te creo</p>
-    
+                    <div class="ctn-audio"> 
                         <audio id="track-mapas">
                             <source src="./audio/audio-yo-te-creo.mp3" type="audio/mpeg">
-                        </audio>
-                        
-                        <div id="player-container-mapas">
-                            <div id="play-pause-mapas" class="play">Play</div>
-                        </div>                
+                        </audio>    
                     </div>
+                </div>
+                <div class="ctn-texto-traducido">
+                    <p>yo te creo</p>
                 </div>
             </div>            
         </div>
@@ -853,24 +859,24 @@
     <div class="box-main-monitoreo">
 
         <div class="main-audio">    
-            <img src="./img/mariposa-audio.png" alt="" class="mariposa-audio">  
+            <div class="ctn-player-container">
+                <div id="player-container-promesas">
+                    <div id="play-pause-promesas" class="play">Play</div>
+                </div>
+            </div>            
             <div class="ctn-main-audio">       
                 <h3>
                     wika <br> atajame
                 </h3>
                 <div class="box-audio">
-                    <div class="ctn-audio">
-                        <p>yo te apoyo</p>
-    
+                    <div class="ctn-audio">                        
                         <audio id="track-promesas">
                             <source src="./audio/audio-yo-te-apoyo.mp3" type="audio/mpeg">
-                        </audio>
-                        
-                        <div id="player-container-promesas">
-                            <div id="play-pause-promesas" class="play">Play</div>
-                        </div>
-                    
+                        </audio>                     
                     </div>
+                </div>
+                <div class="ctn-texto-traducido">
+                    <p>yo te apoyo</p>    
                 </div>
             </div> 
         </div>
