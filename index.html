@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v51">
+    <link rel="stylesheet" href="./css/style.css?v53">
 </head>
 <body>
 
@@ -160,7 +160,7 @@
 
         <div class="section">
             <div class="block" id="block-1-mapa">
-                <img src="./img/mapa-1.png" alt="" width="100%" id="mapa">
+                <img src="./img/mapa-1-2.png" alt="" width="100%" id="mapa">
             </div>
 
             <div class="block" id="block-2-mapa">
@@ -169,6 +169,14 @@
 
             <div class="block" id="block-3-mapa">
 
+            </div>
+
+            <div class="block block-relative" id="block-contexto-1">
+                <div class="bloque-texto">
+                    <p>
+                        La violencia sexual en la provincia sigue siendo una problemática alarmante, especialmente en contextos vulnerables como el de las niñas y adolescentes.
+                    </p>
+                </div>
             </div>
 
             <!-- mapa 2 -->
@@ -203,6 +211,14 @@
 
             <!-- mapa 3 -->
 
+            <div class="block block-relative" id="block-contexto-2">
+                <div class="bloque-texto">
+                    <p>
+                        Las mujeres Awajún enfrentan retos diarios para visibilizar y combatir la violencia en sus comunidades, con una cifra que no deja de aumentar.
+                    </p>
+                </div>
+            </div>
+
             <div class="block" id="block-9-mapa">
  
             </div>
@@ -215,6 +231,10 @@
  
             </div>
 
+            <div class="block" id="block-11-2-mapa">
+ 
+            </div>
+
             <div class="block block-relative" id="block-12-mapa">
                 <div class="bloque-texto">
                     <p>
@@ -224,6 +244,14 @@
             </div>
 
             <!-- mapa 4 -->
+
+            <div class="block block-relative" id="block-contexto-3">
+                <div class="bloque-texto">
+                    <p>
+                        El embarazo adolescente en Condorcanqui no solo supera el promedio nacional, sino que evidencia profundas carencias en educación y salud.
+                    </p>
+                </div>
+            </div>
 
             <div class="block" id="block-13-mapa">
  
@@ -961,7 +989,7 @@
         </div>
 
         <div class="box-main-apus">
-            <h4>La labor de los Apus Demetrio Shajup (Mamayaque) y Gabriel Arrobo (Huampami) en la lucha contra la violencia de género</h4>
+            <h4>La labor de dos Apus en la lucha contra la violencia de género</h4>
             <p>
                 En las comunidades indígenas, los apus desempeñan un rol esencial como líderes y guías, además de tomar las decisiones más relevantes y resolver conflictos. Demetrio Shajup, de Mamayaque, y Gabriel Arrobo, de Huampami, han destacado por su apoyo a la lucha contra la violencia de género. A través de su liderazgo, han promovido la inclusión, el empoderamiento de las mujeres y la actualización de normas comunitarias para garantizar mayor equidad.
             </p>
@@ -1824,7 +1852,7 @@
         </div>
 
         <p class="parrafo-cierre">
-            Estos cambios positivos son un reflejo de esperanza para las comunidades de Amazonas, pero también una hoja de ruta para otras sociedades que enfrentan círculos de violencia. Si bien son pasos fundamentales y sin precedentes, actualmente, solo hay dos comunidades sensibilizadas en Condorcanqui, lo que representa apenas el 2% de las comunidades de la provincia y el 0.7% del total de comunidades en Amazonas. Al compartir estas historias, tú también te conviertes en un agente de cambio, multiplicando la fuerza de quienes decidieron romper el silencio y construir un futuro más seguro. Haz que estas voces lleguen más lejos.
+            Estos avances representan esperanza para las comunidades de Amazonas y una guía para enfrentar la violencia en otras sociedades. Sin embargo, solo dos comunidades sensibilizadas en Condorcanqui, equivalen al 2% de la provincia y al 0.7% de las comunidades en Amazonas. Al compartir estas historias, ayudan a amplificar las voces de quienes rompieron el silencio para construir un futuro más seguro.
         </p>
 
     </div>
@@ -2801,7 +2829,7 @@
             });
     </script>
 
-    <!-- animaciones mapas -->  
+    <!-- animaciones mapas ubicador y datos -->  
     <script>             
         document.addEventListener('DOMContentLoaded', () => {
             const controller = new ScrollMagic.Controller(); 
@@ -2810,7 +2838,7 @@
             new ScrollMagic.Scene({
             triggerElement: ".section",
                 triggerHook: 0,
-                duration: "2200%",
+                duration: "2600%",
             })
             .setPin(".section")
             //.addIndicators({ name: "Section Pin" }) 
@@ -2821,7 +2849,7 @@
             // Agregar el cambio de opacity primero
             timeline.to("#block-1-mapa", { opacity: 1, duration: 1 });
             // Luego agregar el cambio de scale
-            timeline.to("#mapa", { scale: 5, duration: 1, ease: "circ.in" });
+            timeline.to("#mapa", { scale: 6, duration: 1, ease: "circ.in" });
 
             // Configurar la escena de ScrollMagic
             new ScrollMagic.Scene({
@@ -2860,11 +2888,28 @@
             //.addIndicators({ name: "Block 3 Fade-In" })
             .addTo(controller);  
 
-            // Bloque 4 - Fade-in - mapa 4
+            // Bloque texto contexto 1 
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
                 offset: window.innerHeight * 4,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-contexto-1", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
+            )
+            //.addIndicators({ name: "Bloque texto contexto 1 " })
+            .addTo(controller);
+
+            // Bloque 4 - Fade-in - mapa 4
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 5,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2877,7 +2922,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 5,
+                offset: window.innerHeight * 6,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2890,7 +2935,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 6,
+                offset: window.innerHeight * 7,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2903,7 +2948,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 7,
+                offset: window.innerHeight * 8,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2920,7 +2965,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 8,
+                offset: window.innerHeight * 9,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2932,12 +2977,29 @@
             )
             //.addIndicators({ name: "Bloque 8 - Caja de texto" })
             .addTo(controller);   
+
+            // Bloque texto contexto 2 
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 10,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-contexto-2", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
+            )
+            //.addIndicators({ name: "Bloque texto contexto 1 " })
+            .addTo(controller);
             
             // Bloque 9 - Fade-in - mapa 9
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 9,
+                offset: window.innerHeight * 11,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2950,7 +3012,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 10,
+                offset: window.innerHeight * 12,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2963,7 +3025,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 11,
+                offset: window.innerHeight * 13,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2972,11 +3034,24 @@
             //.addIndicators({ name: "Block 11 Fade-In" })
             .addTo(controller); 
 
+            // Bloque 11 - 2 - Fade-in - mapa 11
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 14,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-11-2-mapa", { opacity: 1, duration: 1 })
+            )
+            //.addIndicators({ name: "Block 11-2 Fade-In" })
+            .addTo(controller); 
+
             // Bloque 12 - Caja de texto 1 | mapa 3
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 12,
+                offset: window.innerHeight * 15,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2989,11 +3064,28 @@
             //.addIndicators({ name: "Bloque 12 - Caja de texto" })
             .addTo(controller);   
 
+            // Bloque 12 - Caja de texto 1 | mapa 3
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 16,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-contexto-3", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
+            )
+            //.addIndicators({ name: "block-contexto-3" })
+            .addTo(controller);   
+
             // Bloque 13 - Fade-in - mapa 13
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 13,
+                offset: window.innerHeight * 17,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3006,7 +3098,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 14,
+                offset: window.innerHeight * 18,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3019,7 +3111,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 15,
+                offset: window.innerHeight * 19,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3032,7 +3124,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 16,
+                offset: window.innerHeight * 20,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3045,7 +3137,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 17,
+                offset: window.innerHeight * 21,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3062,7 +3154,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 18,
+                offset: window.innerHeight * 22,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3079,7 +3171,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 19,
+                offset: window.innerHeight * 23,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3092,7 +3184,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 20,
+                offset: window.innerHeight * 24,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3105,7 +3197,7 @@
              new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 21,
+                offset: window.innerHeight * 25,
                 duration: window.innerHeight,
             })
             .setTween(
