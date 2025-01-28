@@ -2425,7 +2425,7 @@ p.parrafo-cierre{
     }
 
     .bloque-texto{
-        width: 100%;
+        width: 95%;
     }
 
     .box-main-comparativo p{
@@ -2475,8 +2475,62 @@ p.parrafo-cierre{
     #myVideo{
         height: 30vh;
     }
+    .bloque-texto p{
+        font-size: 17px;
+    }
     #mapa{
         transform-origin: 21% 18%;
+    }
+    #block-2-mapa,
+    #block-3-mapa,
+    #block-4-mapa,
+    #block-9-mapa,
+    #block-10-mapa,
+    #block-11-mapa,
+    #block-11-2-mapa{
+        background-position: 52% top;
+    }
+    #block-5-mapa{
+        background-image: url(../img/mapa-5-2-movil.jpg?v2);
+        background-position: 32% top;
+    }
+    #block-6-mapa{
+        background-position: 45% top;
+    }
+    #block-11-2-mapa{
+        
+    }
+    #block-13-mapa{
+        background-position: 39% top;
+        background-image: url(../img/mapa-10-2-movil.jpg?v2);
+    }
+    #block-14-mapa{
+        background-position: 39% top;
+        background-image: url(../img/mapa-11-2-movil.jpg?v2);
+    }
+    #block-15-mapa{
+        background-image: url(../img/mapa-12-2-movil.jpg?v3);
+        background-position: 52% top;
+    }
+    #block-16-mapa{
+        background-position: 45% top;
+    }
+    #block-19-mapa,
+    #block-20-mapa{
+        background-position: 45% top;
+    }
+
+    #comparision-2 .divisor .box-texto-foto,
+    #comparision-3 .box-texto-despues{
+        bottom: 28px;
+    }
+
+    #mariposa-footer-6,
+    #mariposa-footer-7,
+    #mariposa-footer-8,
+    #mariposa-footer-9,
+    #mariposa-footer-10{
+        display: none;
     }
 
 }
