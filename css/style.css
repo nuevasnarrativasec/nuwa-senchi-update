@@ -2469,4 +2469,14 @@ p.parrafo-cierre{
         padding: 0 20px;
     }
 
+    #videoContainer{
+        height: 30vh !important;
+    }
+    #myVideo{
+        height: 30vh;
+    }
+    #mapa{
+        transform-origin: 21% 18%;
+    }
+
 }
