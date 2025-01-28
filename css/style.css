@@ -1484,11 +1484,9 @@ html {
             text-align: center;
         }
         .box-main-promesometro p{
-            font: 15px/1.5 "Roboto", serif;
-            font-weight: 400;
+            font: 17px / 1.5 "Roboto", serif;
             margin: 10px auto;
-            max-width: 600px;
-            text-align: center;
+            max-width: 490px;
         }
         .box-grafico-puntaje{
             margin: 20px auto 50px;

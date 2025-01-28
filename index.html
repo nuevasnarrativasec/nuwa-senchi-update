@@ -811,7 +811,7 @@
                         Comunidad de Huampami
                     </h6>
                     <p>
-                        Ubicada en la <b>parte norte de la provincia de Condorcanqui,</b> es una de las comunidades más representativas del distrito de El Cenepa. Está rodeada por ríos como el Cenepa y sus afluentes, siendo el transporte fluvial la principal vía de comunicación. Su infraestructura es limitada, y la comunidad es un importante centro cultural y social para el pueblo Awajún.
+                        Ubicada en la <b>parte norte de la provincia de Condorcanqui,</b> en el departamento de Amazonas. Rodeada por ríos como el Cenepa, con infraestructura limitada y acceso principalmente por vías fluviales.
                     </p>
                 </div>
 
@@ -3152,41 +3152,41 @@
             layoutAlgorithm: {
                 enableSimulation: true,
                 integration: 'verlet',
-                linkLength: 100
+                linkLength: 200
             },
             point: {
                 events: {
                 click: function () {
-                    var existingPopup = document.getElementById('custom-popup');
-                    if (existingPopup) {
-                    document.body.removeChild(existingPopup);
+                        var existingPopup = document.getElementById('custom-popup');
+                        if (existingPopup) {
+                        document.body.removeChild(existingPopup);
+                        }
+
+                        var popup = document.createElement('div');
+                        popup.id = 'custom-popup';
+                        popup.style.position = 'fixed';
+                        popup.style.background = '#fff';
+                        popup.style.border = '1px solid #ccc';
+                        popup.style.padding = '20px';
+                        popup.style.borderRadius = '5px';
+                        popup.style.width = '300px';
+                        popup.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
+                        popup.style.left = '50%';
+                        popup.style.top = '50%';
+                        popup.style.transform = 'translate(-50%, -50%)';
+                        popup.style.zIndex = '1000';
+                        popup.innerHTML = `
+                        <h6>${this.name}</h6>
+                        <p>${customData[this.name] || 'No additional information available.'}</p>
+                        <br>
+                        <button id="close-popup">cerrar</button>
+                        `;
+                        document.body.appendChild(popup);
+
+                        document.getElementById('close-popup').addEventListener('click', function () {
+                        document.body.removeChild(popup);
+                        });
                     }
-
-                    var popup = document.createElement('div');
-                    popup.id = 'custom-popup';
-                    popup.style.position = 'fixed';
-                    popup.style.background = '#fff';
-                    popup.style.border = '1px solid #ccc';
-                    popup.style.padding = '20px';
-                    popup.style.borderRadius = '5px';
-                    popup.style.width = '300px';
-                    popup.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
-                    popup.style.left = '50%';
-                    popup.style.top = '50%';
-                    popup.style.transform = 'translate(-50%, -50%)';
-                    popup.style.zIndex = '1000';
-                    popup.innerHTML = `
-                    <h6>${this.name}</h6>
-                    <p>${customData[this.name] || 'No additional information available.'}</p>
-                    <br>
-                    <button id="close-popup">cerrar</button>
-                    `;
-                    document.body.appendChild(popup);
-
-                    document.getElementById('close-popup').addEventListener('click', function () {
-                    document.body.removeChild(popup);
-                    });
-                }
                 }
             }
             }
@@ -3194,12 +3194,17 @@
 
         series: [{
             marker: {
-                radius: 20,
+                radius: 30,
             },
             dataLabels: {
                 enabled: true,
                 linkFormat: '',
-                allowOverlap: true
+                allowOverlap: true,
+            style: {
+                fontSize: '11px', 
+                fontWeight: 'bold',
+                color: '#333' 
+                },
             },
             data: [
                 ['Red de lideresas', 'Empoderamiento económico'],
@@ -3220,41 +3225,41 @@
             nodes: [{
                 id: 'Gaby Tseje',
                 color: '#6d007d'
-            },{
-                id: 'Silvia Shimbuka',
-                color: '#6d007d'
-            },{
-                id: 'Rossmery Pioc',
-                color: '#6d007d'
-            },{
-                id: 'Carmen Samaniego',
-                color: '#6d007d'
-            },{
-                id: 'Empoderamiento económico',
-                color: '#e9a425'
-            }, {
-                id: 'Red de lideresas',
-                color: '#477f1e'
-            }, {
-                id: 'Consejo de Mujeres',
-                color: '#477f1e'
-            }, {
-                id: 'Apoyo del UNFPA',
-                color: '#477f1e'
-            }, {
-                id: 'Educación respetuosa',
-                color: '#e9a425'
-            },{
-                id: 'Reducción de violencia',
-                color: '#e9a425'
-            },{
-                id: 'Sensibilización de Apus',
-                color: '#e9a425'
-            },{
-                id: 'Sharon Alberca',
-                color: '#6d007d'
+                },{
+                    id: 'Silvia Shimbuka',
+                    color: '#6d007d'
+                },{
+                    id: 'Rossmery Pioc',
+                    color: '#6d007d'
+                },{
+                    id: 'Carmen Samaniego',
+                    color: '#6d007d'
+                },{
+                    id: 'Empoderamiento económico',
+                    color: '#e9a425'
+                }, {
+                    id: 'Red de lideresas',
+                    color: '#477f1e'
+                }, {
+                    id: 'Consejo de Mujeres',
+                    color: '#477f1e'
+                }, {
+                    id: 'Apoyo del UNFPA',
+                    color: '#477f1e'
+                }, {
+                    id: 'Educación respetuosa',
+                    color: '#e9a425'
+                },{
+                    id: 'Reducción de violencia',
+                    color: '#e9a425'
+                },{
+                    id: 'Sensibilización de Apus',
+                    color: '#e9a425'
+                },{
+                    id: 'Sharon Alberca',
+                    color: '#6d007d'
+                }]
             }]
-        }]
         });
     </script>
     
