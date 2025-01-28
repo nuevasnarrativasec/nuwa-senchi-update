@@ -1310,7 +1310,7 @@ html {
                         width: 100%;
                     }
                 .comparison figure div { 
-                    background-image: url('../img/bg-antes-1.jpg'); 
+                    background-image: url('../img/bg-antes-1-2.jpg'); 
                     background-size: cover;
                     position: absolute;
                     width: 50%; 
@@ -1324,10 +1324,10 @@ html {
                     background-image: url('../img/bg-despues-2.jpg'); 
                 }   
                 #comparision-2 figure div{
-                    background-image: url('../img/bg-antes-2.jpg'); 
+                    background-image: url('../img/bg-antes-2-2.jpg'); 
                 }   
                 #comparision-3 figure{
-                    background-image: url('../img/bg-despues-3.jpg'); 
+                    background-image: url('../img/bg-despues-3-2.jpg'); 
                 }   
                 #comparision-3 figure div{
                     background-image: url('../img/bg-antes-3.jpg'); 

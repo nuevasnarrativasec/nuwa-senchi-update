@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v49">
+    <link rel="stylesheet" href="./css/style.css?v51">
 </head>
 <body>
 
@@ -2730,17 +2730,14 @@
         document.querySelectorAll('.comparison .slider').forEach(slider => {
             slider.addEventListener('input', function () {
                 const divisor = this.closest('.comparison').querySelector('.divisor');
-                const width = parseInt(this.value, 10); // Obtenemos el valor actual del slider
-                
+                const width = parseInt(this.value, 10); // Obtiene el valor actual del slider
+
                 // Actualizamos el ancho del divisor
                 divisor.style.width = width + '%';
-                
-                // Si el ancho es >= 90%, añadimos la clase 'grayscale'
-                if (width >= 90) {
+
+                // Si el ancho es >= 90%, añadimos la clase 'grayscale' (una sola vez)
+                if (width >= 90 && !divisor.classList.contains('grayscale')) {
                     divisor.classList.add('grayscale');
-                } else {
-                    // Si el ancho es < 90%, removemos la clase
-                    divisor.classList.remove('grayscale');
                 }
             });
         });
