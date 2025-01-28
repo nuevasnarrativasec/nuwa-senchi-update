@@ -1350,7 +1350,13 @@ html {
                 }   
                 #comparision-3 figure div{
                     background-image: url('../img/bg-antes-3.jpg'); 
-                }       
+                }     
+                #comparision-2 .divisor .box-texto-foto{
+                    bottom: 67px;
+                }
+                #comparision-3 .box-texto-despues{
+                    bottom: 67px;
+                }
             input[type=range]{       
                 background-color: transparent; 
                 left: -2%;        
