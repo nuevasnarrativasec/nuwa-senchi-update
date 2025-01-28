@@ -2728,9 +2728,20 @@
     <!-- slider comparador-->
     <script>        
         document.querySelectorAll('.comparison .slider').forEach(slider => {
-            slider.addEventListener('input', function () {                
+            slider.addEventListener('input', function () {
                 const divisor = this.closest('.comparison').querySelector('.divisor');
-                divisor.style.width = this.value + '%';
+                const width = parseInt(this.value, 10); // Obtenemos el valor actual del slider
+                
+                // Actualizamos el ancho del divisor
+                divisor.style.width = width + '%';
+                
+                // Si el ancho es >= 90%, añadimos la clase 'grayscale'
+                if (width >= 90) {
+                    divisor.classList.add('grayscale');
+                } else {
+                    // Si el ancho es < 90%, removemos la clase
+                    divisor.classList.remove('grayscale');
+                }
             });
         });
     </script>

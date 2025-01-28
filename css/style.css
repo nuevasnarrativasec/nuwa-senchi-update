@@ -1412,6 +1412,10 @@ html {
             width: 255px;   
             z-index: 2;       
         }
+        .grayscale {
+            filter: grayscale(100%);
+            transition: filter 0.3s ease; 
+        }
 
     .box-main-apus{
 
