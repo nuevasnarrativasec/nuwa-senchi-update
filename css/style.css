@@ -984,7 +984,7 @@ html {
                     text-transform: uppercase;
                 }
     .box-lider{
-        margin: 40px auto;
+        margin: 40px auto 80px;
         max-width: 430px;
     }  
         .box-lider img.bg{
@@ -2091,7 +2091,7 @@ html {
     #container-conexiones {
         height: 500px;
         min-width: 320px;
-        margin: 80px auto 40px;
+        margin: 80px auto;
         max-width: 800px;    
     }
     .box-main-conexiones p {
