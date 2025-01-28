@@ -1889,7 +1889,7 @@ html {
     .box-footer-negro{
         /*background-color: #000;*/
         background: rgb(132,25,185);
-        background: linear-gradient(180deg, rgba(132,25,185,1) 0%, rgba(29,5,41,1) 75%, rgba(0,0,0,1) 100%);    
+        background: linear-gradient(180deg, rgba(132, 25, 185, 1) 0%, rgb(57 13 79) 75%, rgba(0, 0, 0, 1) 100%);
         min-height: 80vh;
         position: relative;
     }
@@ -1928,6 +1928,31 @@ html {
                 left: 40%;
                 transform: translate(-50%,0%);
                 top: 35%;
+            }
+            #mariposa-footer-6{                
+                left: 15%;
+                transform: translate(-50%,0%);
+                top: 35%;
+            }
+            #mariposa-footer-7{               
+                right: 5%;
+                transform: translate(-50%,0%);
+                top: 35%;
+            }
+            #mariposa-footer-8{               
+                left: 30%;
+                transform: translate(-50%,0%);
+                top: 55%;
+            }
+            #mariposa-footer-9{                
+                right: 15%;
+                transform: translate(-50%,0%);
+                top: 55%;
+            }
+            #mariposa-footer-10{                
+                left: 15%;
+                transform: translate(-50%,0%);
+                top: 55%;
             }
         .box-mensaje-footer{
             background-color: #fff;
