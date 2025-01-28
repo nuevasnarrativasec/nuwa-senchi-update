@@ -1365,7 +1365,7 @@ html {
                 width: 102%; 
                 z-index: 10;
 
-                -webkit-appearance:unset;
+                -webkit-appearance: unset;
                 -moz-appearance: none;
             }
             input[type=range]:focus { 
@@ -1392,7 +1392,7 @@ html {
                 height: 40px;   
                 width: 40px; 
                 border-radius: 0;
-                -webkit-appearance: none;
+                -webkit-appearance: unset;
             }  
             input[type=range]:focus::-webkit-slider-thumb {
                 /*background: rgba(174, 17, 17, 0.5);*/
