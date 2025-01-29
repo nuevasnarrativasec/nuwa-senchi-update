@@ -1469,7 +1469,7 @@ html {
             }
 
     .box-main-promesometro{
-
+        margin-bottom: 160px;
     }
         .box-svg{
             cursor: pointer;
@@ -2612,6 +2612,9 @@ html {
         margin: 80px auto 40px;
     }
 
+    .ctn-parrafo-cierre{
+        padding-top: 40px;
+    }
     p.parrafo-cierre{
         font-size: 15px;
         padding: 50px 20px;
