@@ -2219,7 +2219,7 @@ p.parrafo-cierre{
     }
         .box-lideresas ul li{
             display: inline-block;
-            margin: 0 20px;
+            margin: 0 8%;
             min-width: 115px;
         }
         .box-lideresas ul::-webkit-scrollbar {
@@ -2495,6 +2495,17 @@ p.parrafo-cierre{
     }
     #comparision-3 .box-texto-despues{
         bottom: 15px;
+    }
+    
+    .box-main-promesometro h4{
+        font: 36px/1 "Roboto", serif;
+        font-weight: 700;
+        margin: 5px auto 30px;
+    }
+    .box-lideresas h4, 
+    .box-main-comparativo h4, 
+    .box-main-apus h4{
+        line-height: 1;
     }
 
 }
