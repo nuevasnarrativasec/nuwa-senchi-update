@@ -15,13 +15,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v65">
+    <link rel="stylesheet" href="./css/style.css?v66">
     <link rel="stylesheet" href="./css/before-after.min.css">
 </head>
 <body>
 
     <div class="box-layer-audio">
         <div class="ctn-layer-audio">
+
+            <div class="box-texto-intro">
+                <span class="separador"></span>
+                <p>
+                    En este especial, revalorizamos cada palabra awajún porque en ella habita el alma de una cultura, de mujeres que han transformado el dolor en fortaleza y que, con su lengua y su verdad, nos enseñan que la justicia también empieza con el derecho a ser escuchadas en su idioma.
+                </p>
+                <span class="separador"></span>
+            </div>
+
+
             <img src="./img/audio-icon.png" alt="" width="100%" id="audio-icon">
             <img src="./img/no-audio-icon.png" alt="" width="100%" id="no-audio-icon">
             <p>
@@ -146,7 +156,7 @@
             <div class="box-audio">                
                 <div class="ctn-audio">                    
                     <audio id="track-wika">
-                        <source src="./audio/audio-yo-te-escucho-2.mp3" type="audio/mp3" />
+                        <source src="./audio/audio-yo-te-escucho-3.mp3" type="audio/mp3" />
                     </audio>             
                 </div>
             </div>
@@ -295,18 +305,18 @@
                 </div>
             </div>
 
-            <!-- mapa 5 -->
+            <!-- mapa 5 -->            
 
-            <div class="block block-relative" id="block-19-mapa">
+            <div class="block" id="block-19-mapa">
+ 
+            </div>
+
+            <div class="block block-relative" id="block-20-mapa">
                 <div class="bloque-texto">
                     <p>
                         La violencia en los colegios de Condorcanqui evidencia cómo las dinámicas escolares también reflejan problemas sociales más amplios.
                     </p>
                 </div>
-            </div>
-
-            <div class="block" id="block-20-mapa">
- 
             </div>
 
             <div class="block" id="block-21-mapa">
@@ -456,7 +466,7 @@
         <h4>
             Las lideresas awajún
         </h4>
-        <img src="./img/icon-seleccionar.png" alt="" width="100%" class="icon-seleccionar">
+        <img src="./img/icon-seleccionar-2.png" alt="" width="100%" class="icon-seleccionar" style="max-width: 120px;">
 
         <ul>
             <li id="btn-lider-1">
@@ -3209,9 +3219,9 @@
                 })
             )
             //.addIndicators({ name: "Bloque 18 - Caja de texto" })
-            .addTo(controller);
-
-            // Bloque 19 - Caja de texto 1 | mapa 5
+            .addTo(controller);            
+            
+            // Bloque 19 - Fade-in - mapa 19
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
@@ -3219,16 +3229,12 @@
                 duration: window.innerHeight,
             })
             .setTween(
-                gsap.to("#block-19-mapa", {
-                    opacity: 1,
-                    y: "-100%", 
-                    duration: 1,
-                })
+                gsap.to("#block-19-mapa", { opacity: 1, duration: 1 })
             )
-            //.addIndicators({ name: "Bloque 19 - Caja de texto" })
+            //.addIndicators({ name: "Block 19 Fade-In" })
             .addTo(controller);
-            
-            // Bloque 20 - Fade-in - mapa 19
+
+            // Bloque 20 - Caja de texto 1 | mapa 5
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
@@ -3236,9 +3242,13 @@
                 duration: window.innerHeight,
             })
             .setTween(
-                gsap.to("#block-20-mapa", { opacity: 1, duration: 1 })
+                gsap.to("#block-20-mapa", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
             )
-            //.addIndicators({ name: "Block 20 Fade-In" })
+            //.addIndicators({ name: "Bloque 20 - Caja de texto" })
             .addTo(controller);
 
             // Bloque 21 - Fade-in - mapa 20

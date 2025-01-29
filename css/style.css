@@ -107,6 +107,17 @@ html {
             text-decoration: underline;
             text-transform: uppercase;
         }
+        .box-texto-intro{
+            margin-bottom: 40px;
+        }
+            .box-texto-intro p{
+                font: 15px/1.9 'from_where_you_areregular';
+                max-width: 580px;
+                padding: 20px 0;
+            }
+            .box-texto-intro .separador{
+                max-width: 320px;
+            }
 
         @keyframes btn-layer-audio {
             
@@ -172,7 +183,7 @@ html {
         object-fit: cover;
     }
     img.flecha-bajar{
-        bottom: 50px;
+        bottom: 150px;
         cursor: pointer;
         left: 50%;
         max-width: 50px;
@@ -929,6 +940,7 @@ html {
     }
     .box-lideresas ul{
         list-style: none;
+        margin-bottom: 120px;
         padding: 0;
         text-align: center;
     }
@@ -2060,16 +2072,16 @@ html {
             z-index: 210;
             transform: translateY(100%);
         }  
-        #block-19-mapa {            
+        #block-19-mapa {
+            background-image: url('../img/mapa-14-3.jpg?v2');
+            z-index: 220;
+        }  
+        #block-20-mapa {            
             position: absolute;
             opacity: 1;
-            z-index: 220;
-            transform: translateY(100%);
-        }  
-        #block-20-mapa {
-            background-image: url('../img/mapa-14-3.jpg?v2');
             z-index: 230;
-        }  
+            transform: translateY(100%);
+        }          
         #block-21-mapa {
             background-image: url('../img/mapa-15-3.jpg?v2');
             z-index: 240;
@@ -2452,7 +2464,7 @@ html {
         background-image: url(../img/mapa-4-3-movil.jpg?v3);
     }
     #block-5-mapa{
-        background-image: url(../img/mapa-5-3-movil.jpg?v3);
+        background-image: url(../img/mapa-5-3-movil-nuevo.jpg?v3);
     }
     #block-9-mapa{
         background-image: url(../img/mapa-7-3-movil.jpg?v3);
@@ -2470,19 +2482,19 @@ html {
         background-image: url(../img/mapa-10-3-movil.jpg?v3);
     }
     #block-14-mapa{
-        background-image: url(../img/mapa-11-3-movil.jpg?v3);
+        background-image: url(../img/mapa-11-3-movil-nuevo.jpg?v3);
     }
     #block-16-mapa{
-        background-image: url(../img/mapa-12-3-movil.jpg?v3);
+        background-image: url(../img/mapa-12-3-movil-nuevo.jpg?v3);
     }
     #block-17-mapa{
-        background-image: url(../img/mapa-13-3-movil.jpg?v3);
+        background-image: url(../img/mapa-13-3-movil-nuevo.jpg?v3);
     }
     #block-20-mapa{
         background-image: url(../img/mapa-14-3-movil.jpg?v3);
     }
     #block-21-mapa{
-        background-image: url(../img/mapa-15-3-movil.jpg?v3);
+        background-image: url(../img/mapa-15-3-movil-nuevo.jpg?v3);
     }
     
     #comparision-2 .divisor .box-texto-foto{
