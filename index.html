@@ -2693,19 +2693,15 @@
                 if (!isCurrentlyVisible) {
                     infoDiv.style.display = "block";
 
-                    // Desplázate al elemento '.box-main-info' si existe
-                    const boxMainInfo = document.querySelector(".box-main-info");
-                    if (boxMainInfo) {
-                        boxMainInfo.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start",
-                        });
-                    } else {
-                        console.warn("No se encontró el elemento '.box-main-info'");
-                    }
+                    // Desplazamiento suave de 300 píxeles hacia abajo
+                    window.scrollBy({
+                        top: 300, // Cambia este valor según la distancia que desees
+                        behavior: "smooth"
+                    });
                 }
             }
         });
+
 
 
     </script>
