@@ -2272,6 +2272,7 @@ html {
         }
         .box-info-lider{
             margin: 20px auto;
+            text-align: center;
         }
 
     
@@ -2437,9 +2438,6 @@ html {
         padding: 2px 0 0 0;
         text-align: right;
     }
-    .box-main-apus h4{
-        font-size: 32px;
-    }
     .box-main-apus p,
     .box-main-conexiones p,
     p.parrafo-cierre{
@@ -2557,6 +2555,7 @@ html {
     .box-main-apus h4{
         font-size: 27px;
         line-height: 1.1;
+        margin: 80px auto 40px;
     }
 
     p.parrafo-cierre{
@@ -2566,6 +2565,12 @@ html {
     span.separador-cierre{
         width: 70%;
     }
+    .box-main-apus {
+        margin-bottom: 115px;
+    }
+        .box-main-apus ul li{
+            max-width: 130px;
+        }
 
     
 

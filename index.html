@@ -2827,42 +2827,51 @@
             // Agregar eventos a los <li> para mostrar el #box-apu correspondiente
             liElements.forEach(li => {
                 li.addEventListener("click", () => {
-                const targetBoxId = `box-${li.id}`;
-                boxElements.forEach(box => {
-                    if (box.id === targetBoxId) {
-                    box.classList.add("active-lider");
-                    const audio = box.querySelector("audio");
-                    if (audio) {
-                        if (currentAudio && currentAudio !== audio) {
-                        currentAudio.pause();
-                        currentAudio.currentTime = 0;
+                    const targetBoxId = `box-${li.id}`;
+                    boxElements.forEach(box => {
+                        if (box.id === targetBoxId) {
+                            box.classList.add("active-lider");
+
+                            // 🔹 Scroll suave hacia el box-lider correspondiente
+                            box.scrollIntoView({
+                                behavior: "smooth",
+                                block: "center" // Centrar en la pantalla
+                            });
+
+                            // Reproducir el audio si existe
+                            const audio = box.querySelector("audio");
+                            if (audio) {
+                                if (currentAudio && currentAudio !== audio) {
+                                    currentAudio.pause();
+                                    currentAudio.currentTime = 0;
+                                }
+                                audio.play();
+                                currentAudio = audio;
+                            }
+                        } else {
+                            box.classList.remove("active-lider");
+                            const audio = box.querySelector("audio");
+                            if (audio) {
+                                audio.pause();
+                                audio.currentTime = 0;
+                            }
                         }
-                        audio.play();
-                        currentAudio = audio;
-                    }
-                    } else {
-                    box.classList.remove("active-lider");
-                    const audio = box.querySelector("audio");
-                    if (audio) {
-                        audio.pause();
-                        audio.currentTime = 0;
-                    }
-                    }
-                });
+                    });
                 });
             });
 
             // Pausar audio si box-main-apus sale del viewport
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
-                if (!entry.isIntersecting && currentAudio) {
-                    currentAudio.pause();
-                }
+                    if (!entry.isIntersecting && currentAudio) {
+                        currentAudio.pause();
+                    }
                 });
             }, { threshold: 0.1 });
 
             observer.observe(boxMainApus);
-            });
+        });
+
     </script>
 
     <!-- animaciones mapas ubicador y datos -->  
