@@ -160,6 +160,15 @@
     <div class="box-parallax-mapa">        
 
         <div class="section">
+
+            <div class="block block-relative" id="block-contexto-intro">
+                <div class="bloque-texto">
+                    <p>
+                        Condorcanqui es un reflejo de la diversidad cultural y demográfica del país, con una alta presencia de comunidades indígenas.  Este mapa permitirá explorar algunas de las problemáticas sociales de esta provincia amazónica, como la violencia contra la mujer y el embarazo adolescente.
+                    </p>
+                </div>
+            </div>
+
             <div class="block" id="block-1-mapa">
                 <img src="./img/mapa-1-2.png" alt="" width="100%" id="mapa">
             </div>
@@ -190,17 +199,17 @@
  
             </div>
  
-            <div class="block" id="block-6-mapa">
+            <!--<div class="block" id="block-6-mapa">
  
-            </div>
+            </div>-->
 
-            <div class="block block-relative" id="block-7-mapa">
+            <!--<div class="block block-relative" id="block-7-mapa">
                 <div class="bloque-texto">
                     <p>
                         Los Centros de Emergencia Mujer (CEM) atendieron 346 casos de violencia sexual en 2024, 280 de estos contra niñas y adolescentes menores de 18 años.
                     </p>
                 </div>
-            </div>
+            </div>-->
 
             <div class="block block-relative" id="block-8-mapa">
                 <div class="bloque-texto">
@@ -2846,11 +2855,29 @@
             new ScrollMagic.Scene({
             triggerElement: ".section",
                 triggerHook: 0,
-                duration: "2600%",
+                duration: "2700%",
             })
             .setPin(".section")
             //.addIndicators({ name: "Section Pin" }) 
             .addTo(controller);
+
+            // Bloque texto intro
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-contexto-intro", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
+            )
+            //.addIndicators({ name: "block-contexto-intro" })
+            .addTo(controller);
+
 
             // Bloque 1 - Fade-in - mapa 1          
             var timeline = gsap.timeline();
@@ -2863,7 +2890,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                duration: window.innerHeight,
+                duration: window.innerHeight * 2,
             })
                 .setTween(timeline) // Asignar la línea de tiempo a la escena
                 //.addIndicators({ name: "Block 1 Fade-In" }) // Opcional para depuración
@@ -2874,7 +2901,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 2,
+                offset: window.innerHeight * 3,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2887,7 +2914,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 3,
+                offset: window.innerHeight * 4,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2900,7 +2927,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 4,
+                offset: window.innerHeight * 5,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2917,7 +2944,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 5,
+                offset: window.innerHeight * 6,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2930,7 +2957,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 6,
+                offset: window.innerHeight * 7,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2940,10 +2967,10 @@
             .addTo(controller); 
 
             // Bloque 6 - Fade-in - mapa 6
-            new ScrollMagic.Scene({
+            /*new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 7,
+                offset: window.innerHeight * 8,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2956,7 +2983,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 8,
+                offset: window.innerHeight * 9,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2967,13 +2994,13 @@
                 })
             )
             //.addIndicators({ name: "Bloque 7 - Caja de texto" })
-            .addTo(controller);
+            .addTo(controller);*/
 
             // Bloque 8 - Caja de texto 2 | mapa 2
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 9,
+                offset: window.innerHeight * 8,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -2990,7 +3017,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 10,
+                offset: window.innerHeight * 9,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3007,7 +3034,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 11,
+                offset: window.innerHeight * 10,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3020,7 +3047,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 12,
+                offset: window.innerHeight * 11,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3033,7 +3060,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 13,
+                offset: window.innerHeight * 12,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3046,7 +3073,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 14,
+                offset: window.innerHeight * 13,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3059,7 +3086,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 15,
+                offset: window.innerHeight * 14,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3076,7 +3103,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 16,
+                offset: window.innerHeight * 15,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3093,7 +3120,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 17,
+                offset: window.innerHeight * 16,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3106,7 +3133,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 18,
+                offset: window.innerHeight * 17,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3119,7 +3146,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 19,
+                offset: window.innerHeight * 18,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3132,7 +3159,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 20,
+                offset: window.innerHeight * 19,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3145,7 +3172,7 @@
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 21,
+                offset: window.innerHeight * 20,
                 duration: window.innerHeight,
             })
             .setTween(
