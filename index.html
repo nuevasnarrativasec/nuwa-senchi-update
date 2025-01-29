@@ -2544,26 +2544,35 @@
     
     <!-- scroll play video -->
     <script>
-        // Seleccionamos el video y el contenedor
-        /*const video = document.getElementById('myVideo');
-        const videoContainer = document.getElementById('videoContainer');
+        document.addEventListener("DOMContentLoaded", function () {
+            const video = document.getElementById('myVideo');
+            const videoContainer = document.getElementById('videoContainer');
 
-        // Inicializamos el controlador de ScrollMagic
-        const controller = new ScrollMagic.Controller();
+            if (!video || !videoContainer) return;
 
-        // Creamos una escena para controlar el video
-        new ScrollMagic.Scene({
-        triggerElement: videoContainer, 
-        triggerHook: 0.5, 
-        duration: videoContainer.offsetHeight, 
-        })
-        .on("enter", () => {
-            video.play();
-        })
-        .on("leave", () => {
-            video.pause();
-        })
-        .addTo(controller); */
+            // Detectar si estamos en móvil (menos de 768px)
+            if (window.innerWidth < 768) {
+                console.log("ScrollMagic desactivado en móvil");
+                return; 
+            }
+
+            // Inicializamos ScrollMagic solo en escritorio
+            const controller = new ScrollMagic.Controller();
+
+            new ScrollMagic.Scene({
+                triggerElement: videoContainer,
+                triggerHook: 0.5,
+                duration: videoContainer.offsetHeight,
+            })
+            .on("enter", () => {
+                video.play();
+            })
+            .on("leave", () => {
+                video.pause();
+            })
+            .addTo(controller);
+        });
+
 
     </script>
 
