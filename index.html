@@ -2545,7 +2545,7 @@
     <!-- scroll play video -->
     <script>
         // Seleccionamos el video y el contenedor
-        const video = document.getElementById('myVideo');
+        /*const video = document.getElementById('myVideo');
         const videoContainer = document.getElementById('videoContainer');
 
         // Inicializamos el controlador de ScrollMagic
@@ -2563,7 +2563,7 @@
         .on("leave", () => {
             video.pause();
         })
-        .addTo(controller); 
+        .addTo(controller); */
 
     </script>
 
@@ -2768,41 +2768,13 @@
     </script>
 
     <!-- slider comparador-->
-    <script>        
-        document.querySelectorAll('.comparison .slider').forEach(slider => {
-            function updateDivisor() {
-                const divisor = this.closest('.comparison').querySelector('.divisor');
-                const width = Number(this.value); // Asegura un valor numérico
-
-                // Actualiza el ancho del divisor
-                divisor.style.width = width + '%';
-
-                // Forzar un reflow para que iOS lo aplique correctamente
-                divisor.offsetHeight;
-
-                // Agregar la clase 'grayscale' si el ancho es >= 90%
-                if (width >= 90 && !divisor.classList.contains('grayscale')) {
-                    divisor.classList.add('grayscale');
-                }
-            }
-
-            // Usa tanto 'input' como 'change' para mejor compatibilidad en iOS
-            slider.addEventListener('input', updateDivisor);
-            slider.addEventListener('change', updateDivisor);
-        });
-
-    </script>
-
     <script>
         $(document).ready(function(){
             $('.ba-slider').each(function(){
                 $(this).beforeAfter();
             });
         });
-
     </script>
-
-
 
     <!-- box apus -->
     <script>
