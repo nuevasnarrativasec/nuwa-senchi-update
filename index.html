@@ -982,6 +982,18 @@
                     <input type="range" min="0" max="100" value="50" class="slider">
                 </div>
             </div>
+
+            <div id="slider1" style="display: flex; justify-content: center;">
+                <div class="slider-container" style="width: 90%; height: 400px;">
+                    <div class="slider-wrap">
+                        <div class="before-img">
+                        <img src="https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/before.jpg" alt="">
+                        </div>
+                        <img src="https://cdn.jsdelivr.net/gh/VincentTV/VincentTV-Code@master/Before%26After-Slider/after.jpg" alt="">
+                        <span class="slider-btn" style="background: none;"></span>
+                    </div>
+                </div>
+            </div>
             
         </div>
 
@@ -2002,6 +2014,7 @@
     <script src="https://d1ts5g4ys243sh.cloudfront.net/proyectos_especiales_prod/especiales/el-metro-interminable-ecpm/js/debug.addIndicators.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/networkgraph.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/before-after-slider@1.0.0/dist/slider.bundle.js"></script>
 
 
     <!-- compartir -->
@@ -2777,6 +2790,18 @@
                     divisor.classList.add('grayscale');
                 }
             });
+        });
+    </script>
+
+    <script>
+        new SliderBar({
+            el: '#slider1',            // The container, required
+            beforeImg: './img/bg-antes-1-2.jpg',  // before image, required
+            afterImg: './img/bg-despues-1.jpg',    // after image, required
+            width: "90%",               // slide-wrap width, default 100%
+            height: "400px",            // slide-wrap height, default image-height
+            line: false,                 // Dividing line, default true
+            lineColor: "rgba(0,0,0,0.5)" // Dividing line color, default rgba(0,0,0,0.5)
         });
     </script>
 
