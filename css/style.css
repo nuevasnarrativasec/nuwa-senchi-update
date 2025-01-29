@@ -1485,8 +1485,8 @@ html {
         .box-lider {
             display: none;
         }
-            .box-lider.active-lider {
-                display: block;
+            .box-main-apus .box-lider.active-lider {
+                display: block !important;
             }
 
     .box-main-promesometro{
