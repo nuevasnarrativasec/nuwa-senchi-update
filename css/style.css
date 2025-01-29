@@ -2481,11 +2481,7 @@ html {
     #block-21-mapa{
         background-image: url(../img/mapa-15-3-movil.jpg?v3);
     }
-
-
-   
     
-
     #comparision-2 .divisor .box-texto-foto{
         bottom: 28px;
     }
@@ -2536,6 +2532,14 @@ html {
     .box-main-comparativo h4, 
     .box-main-apus h4{
         line-height: 0.9;
+    }
+
+    p.parrafo-cierre{
+        font-size: 15px;
+        padding: 50px 20px;
+    }
+    span.separador-cierre{
+        width: 70%;
     }
 
 }
