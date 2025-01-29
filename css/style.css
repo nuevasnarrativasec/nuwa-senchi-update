@@ -91,10 +91,10 @@ html {
         }
         .ctn-layer-audio p{
             color: #fff;
-            font: 16px/1.4 "Roboto", serif;
+            font: 14px/1.4 "Roboto", serif;
             font-weight: 500;
-            margin: 0 auto;
-            max-width: 300px;
+            margin: 0 auto 15px;
+            max-width: 235px;
             text-align: center;            
         }
         .box-layer-audio span{
@@ -112,6 +112,7 @@ html {
         }
             .box-texto-intro p{
                 font: 15px/1.9 'from_where_you_areregular';
+                margin: 0 auto;
                 max-width: 580px;
                 padding: 20px 0;
             }
