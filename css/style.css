@@ -80,15 +80,14 @@ html {
         left: 50%;
         position: absolute;
         transform: translate(-50%, -50%);
+        text-align: center;
         top: 50%;        
     }
         .ctn-layer-audio img{
             cursor: pointer;
-            display: block;
-            margin: 0 auto 15px;
-            max-width: 65px;
-
-            animation: btn-layer-audio 5s infinite ease-in-out;
+            display: inline-block;
+            margin: 0 8px 15px;
+            max-width: 45px;
         }
         .ctn-layer-audio p{
             color: #fff;
@@ -495,7 +494,7 @@ html {
                     background-image: url('../img/off.png');
                 }
                 .pause {
-                    background-image: url('../img/on.png')!important;
+                    background-image: url('../img/on-2.png')!important;
                 }
                 #player-container-wika #play-pause-wika::after,
                 #player-container-mapas #play-pause-mapas::after,
@@ -2175,6 +2174,7 @@ html {
     }
     .box-main-conexiones p {
         font: 17px / 1.5 "Roboto", serif;
+        letter-spacing: -0.2px;
         margin: 0 auto 20px;
         max-width: 490px;
     }
@@ -2202,7 +2202,7 @@ html {
 p.parrafo-cierre{
     color: #8419b9;
     font: 17px/1.8 'from_where_you_areregular';
-    margin: 80px auto;
+    margin: 160px auto;
     max-width: 750px;
     text-align: center;
 }

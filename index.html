@@ -21,11 +21,11 @@
 
     <div class="box-layer-audio">
         <div class="ctn-layer-audio">
-            <img src="./img/audio-icon-2.png" alt="" width="100%" id="audio-icon">
+            <img src="./img/audio-icon.png" alt="" width="100%" id="audio-icon">
+            <img src="./img/no-audio-icon.png" alt="" width="100%" id="no-audio-icon">
             <p>
                 Para una mejor experiencia te recomendamos activar el audio.
             </p>
-            <span id="cerrar-layer-audio">cerrar</span>
         </div>
     </div>
 
@@ -38,9 +38,6 @@
     </div>
 
     <div class="box-controles-audio">
-        <audio id="track">
-            <source src="./audio/audio-test-video-scroll.mp3" type="audio/mpeg">
-        </audio>
         <div id="player-container-main">
             <div id="play-pause-main" class="play-main">Play</div>
         </div>
@@ -48,7 +45,7 @@
 
     <div class="main-portada">
         <img src="./img/flecha-bajar.png" alt="" width="100%" class="flecha-bajar">
-        <video width="100%" height="100%" muted autoplay loop playsinline id="main-portada-video">
+        <video width="100%" height="100%" muted playsinline id="main-portada-video">
             <source src="./video/video-portada-3.mp4" type="video/mp4">
         </video>
     </div>
@@ -1027,9 +1024,6 @@
                             Demetrio Shajup
                             <span>(Líder de la comunidad de Mamayaque)</span>
                         </h6>
-                        <audio controls>
-                            <source src="https://traffic.omny.fm/d/clips/8b642147-25e1-44dd-9991-adad01233795/b5ee26de-6535-48db-ae6a-ae7601894a37/49036760-1182-4cca-a567-b04c013f95e7/audio.mp3" type="audio/mpeg" />
-                        </audio>
                     </div>
                 </div>
                 <p>
@@ -1052,9 +1046,6 @@
                             Gabriel Arrobo
                             <span>(Líder de la comunidad de Huampami)</span>
                         </h6>
-                        <audio controls>
-                            <source src="https://traffic.omny.fm/d/clips/8b642147-25e1-44dd-9991-adad01233795/b5ee26de-6535-48db-ae6a-ae7601894a37/49036760-1182-4cca-a567-b04c013f95e7/audio.mp3" type="audio/mpeg" />
-                        </audio>
                     </div>
                 </div>
                 <p>
@@ -2048,86 +2039,71 @@
         });
     </script>
 
-    <!-- intro audio -->
-    <script>        
-        document.addEventListener('DOMContentLoaded', () => {
-            const audioIcon = document.getElementById('audio-icon');
-            const cerrarLayerAudio = document.getElementById('cerrar-layer-audio');
-            const boxLayerAudio = document.querySelector('.box-layer-audio');
-            const mainPortadaVideo = document.querySelector('.main-portada video');
-            const controlBtnMain = document.getElementById('play-pause-main');
-            const playerContainerMain = document.getElementById('player-container-main');
+    <!-- activar / desactivar audio principal -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const audioIcon = document.getElementById("audio-icon");
+            const noAudioIcon = document.getElementById("no-audio-icon");
+            const mainVideo = document.getElementById("main-portada-video");
+            const boxLayerAudio = document.querySelector(".box-layer-audio");
 
-            let isAudioEnabled = false; // Estado general del audio
+            function toggleAudio(mute) {
+                document.querySelectorAll("video, audio").forEach(media => {
+                    media.muted = mute;
+                });
 
-            function isElementInViewport(el) {
-                const rect = el.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
+                // Aseguramos que el video principal se reproduzca
+                if (mainVideo) {
+                    mainVideo.play();
+                }
+
+                // Ocultamos la caja de audio
+                if (boxLayerAudio) {
+                    boxLayerAudio.style.display = "none";
+                }
             }
 
-            // Manejo del clic en el ícono de audio
-            audioIcon.addEventListener('click', () => {
-                if (isElementInViewport(mainPortadaVideo)) {
-                    boxLayerAudio.style.display = 'none';
-                    mainPortadaVideo.muted = false; // Desactivar silencio
-                    mainPortadaVideo.play(); // Reproducir el video
-                    controlBtnMain.classList.replace('play-main', 'pause-main');
-                    isAudioEnabled = true; // Actualizar estado general
-                }
+            audioIcon.addEventListener("click", function () {
+                toggleAudio(false); // Activa el audio
             });
 
-            // Manejo del clic en el botón cerrar
-            cerrarLayerAudio.addEventListener('click', () => {
-                boxLayerAudio.style.display = 'none';
-                mainPortadaVideo.muted = true; // Mantener silencio
-                mainPortadaVideo.play(); // Reproducir el video
-                controlBtnMain.classList.replace('pause-main', 'play-main');
-                isAudioEnabled = false; // Actualizar estado general
-            });
-
-            // Manejo del botón de control general
-            playerContainerMain.addEventListener('click', () => {
-                const allVideos = document.querySelectorAll('video');
-                const allAudios = document.querySelectorAll('audio');
-
-                if (isAudioEnabled) {
-                    allVideos.forEach(video => {
-                        video.muted = true;
-                    });
-                    allAudios.forEach(audio => {
-                        if (!audio.paused) {
-                            audio.dataset.wasPlaying = "true";
-                            audio.pause();
-                        }
-                    });
-                    controlBtnMain.classList.replace('pause-main', 'play-main');
-                    isAudioEnabled = false;
-                } else {
-                    allVideos.forEach(video => {
-                        if (isElementInViewport(video)) {
-                            video.muted = false;
-                        }
-                    });
-                    allAudios.forEach(audio => {
-                        if (audio.dataset.wasPlaying === "true") {
-                            audio.play();
-                            delete audio.dataset.wasPlaying;
-                        }
-                    });
-                    controlBtnMain.classList.replace('play-main', 'pause-main');
-                    isAudioEnabled = true;
-                }
+            noAudioIcon.addEventListener("click", function () {
+                toggleAudio(true); // Silencia el audio
             });
         });
 
 
-    </script>    
 
+    </script>
+
+    <!-- controles de audio -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const playPauseMain = document.getElementById("play-pause-main");
+            const mainVideo = document.getElementById("main-portada-video");
+
+            function toggleMute() {
+                const mediaElements = document.querySelectorAll("video, audio");
+                let isMuted = mediaElements.length > 0 ? mediaElements[0].muted : false;
+
+                mediaElements.forEach(media => {
+                    media.muted = !isMuted;
+                });
+
+                // Aseguramos que el video principal se reproduzca si estaba en mute
+                if (mainVideo && !mainVideo.paused) {
+                    mainVideo.play();
+                }
+
+                // Toggle de clase .pause-main
+                playPauseMain.classList.toggle("pause-main");
+            }
+
+            playPauseMain.addEventListener("click", toggleMute);
+        });
+
+    </script>
+    
     <!-- flecha bajar -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -2244,7 +2220,7 @@
                     mainPortadaVideo2.muted = true; // Activar el mute
                 }
             })
-            .addIndicators("audio main portada")
+            /*.addIndicators("audio main portada")*/
             .addTo(controller);  
 
             // Video scroll
