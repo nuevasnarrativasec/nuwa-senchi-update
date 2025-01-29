@@ -1329,6 +1329,7 @@ html {
             background-color: #000 !important;
             background-image: none !important;
             bottom: 50px;
+            
             height: auto;
             padding: 20px 10px;
             right: 10px;
@@ -1354,6 +1355,7 @@ html {
             background-color: #000 !important;
             background-image: none !important;
             bottom: 50px;
+           
             height: auto;
             padding: 20px 10px;
             position: absolute;
@@ -1370,6 +1372,11 @@ html {
             background: #000000 !important;
             border: 1px solid #000000 !important;
             box-shadow: none !important;
+            font-size: 24px !important;
+            height: 50px !important;
+            margin: -32px 0 0 -25px !important;
+            width: 50px !important;
+            
         }
         #comparision-2 .box-texto-despues{
             bottom: 68px;
@@ -1380,6 +1387,37 @@ html {
         .ba-slider .handle{
             z-index: 50;
         }
+
+        .box-columnas-texto-comparador{
+            display: none;
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+        }
+            .box-texto-columna{
+                /*background-color: #000;*/
+                box-sizing: border-box;
+                display: inline-block;
+                margin: 0 5px;
+                padding: 5px;
+                vertical-align: top;
+                width: 45%;
+            }
+                .box-texto-columna h6{
+                    color: #000;
+                    font: 15px/1.4 "Roboto", serif;
+                    font-weight: 700;
+                    margin: 0 auto;
+                    text-align: left;
+                    text-transform: uppercase;
+                }
+                .box-texto-columna p{
+                    color: #000;
+                    font: 14px/1.3 "Roboto", serif;
+                    margin: 0 auto;
+                    padding: 0 !important;
+                    text-align: left;
+                }
 
     .box-main-apus{
         margin-bottom: 160px;
@@ -2444,6 +2482,15 @@ html {
         padding: 2px 0 0 0;
         text-align: right;
     }
+    .box-columnas-texto-comparador{
+        display: block;
+    }
+
+    .box-texto-despues,
+    .box-comparador .box-texto-foto{
+        display: none;
+    }
+
     .box-main-apus p,
     .box-main-conexiones p,
     p.parrafo-cierre{
