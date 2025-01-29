@@ -59,6 +59,9 @@
         <video width="100%" height="100%" muted playsinline id="main-portada-video">
             <source src="./video/video-portada-4.mp4" type="video/mp4">
         </video>
+        <video width="100%" height="100%" muted playsinline id="main-portada-video-movil">
+            <source src="./video/video-portada-movil.mp4" type="video/mp4">
+        </video>
     </div>
 
     <div class="box-main-bajada">
@@ -2123,28 +2126,37 @@
 
     <!-- activar / desactivar audio principal -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+       document.addEventListener("DOMContentLoaded", function () {
             const audioIcon = document.getElementById("audio-icon");
             const noAudioIcon = document.getElementById("no-audio-icon");
             const mainVideo = document.getElementById("main-portada-video");
+            const mainVideoMovil = document.getElementById("main-portada-video-movil");
             const boxLayerAudio = document.querySelector(".box-layer-audio");
+
+            // Detectar si el usuario está en móvil
+            function esMovil() {
+                return window.innerWidth <= 768; // Puedes ajustar este valor según necesites
+            }
 
             function toggleAudio(mute) {
                 document.querySelectorAll("video, audio").forEach(media => {
                     media.muted = mute;
                 });
 
-                // Aseguramos que el video principal se reproduzca
-                if (mainVideo) {
-                    mainVideo.play();
+                // Seleccionar el video adecuado según el dispositivo
+                const videoActivo = esMovil() ? mainVideoMovil : mainVideo;
+
+                if (videoActivo) {
+                    videoActivo.play();
                 }
 
-                // Ocultamos la caja de audio
+                // Ocultar la caja de audio
                 if (boxLayerAudio) {
                     boxLayerAudio.style.display = "none";
                 }
             }
 
+            // Asignar eventos a los íconos de audio
             audioIcon.addEventListener("click", function () {
                 toggleAudio(false); // Activa el audio
             });
@@ -2152,7 +2164,17 @@
             noAudioIcon.addEventListener("click", function () {
                 toggleAudio(true); // Silencia el audio
             });
+
+            // Asegurar que solo un video esté visible
+            if (esMovil()) {
+                mainVideo.style.display = "none";
+                mainVideoMovil.style.display = "block";
+            } else {
+                mainVideo.style.display = "block";
+                mainVideoMovil.style.display = "none";
+            }
         });
+
 
 
 

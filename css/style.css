@@ -192,6 +192,12 @@ html {
         transform: translate(-50%,0);
         z-index: 10;
     }
+    #main-portada-video{
+        display: block;
+    }
+    #main-portada-video-movil{
+        display: none;
+    }
 
 .box-main-bajada{
     padding: 120px 0 30px;
@@ -2224,6 +2230,13 @@ html {
     }
     #player-container-main{
         top: 5px;
+    }
+
+    #main-portada-video{
+        display: none;
+    }
+    #main-portada-video-movil{
+        display: block;
     }
 
     .box-main-bajada h2,
