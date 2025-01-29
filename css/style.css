@@ -928,7 +928,7 @@ html {
     .box-main-comparativo h4,
     .box-main-apus h4{
         color: #8419b9;
-        font: 36px/1.1 "Roboto", serif;
+        font: 34px/1.1 "Roboto", serif;
         font-weight: 600;
         margin: 0 auto;
         max-width: 600px;
@@ -1374,6 +1374,7 @@ html {
             box-shadow: none !important;
             font-size: 24px !important;
             height: 50px !important;
+            line-height: 50px !important;
             margin: -32px 0 0 -25px !important;
             width: 50px !important;
             
