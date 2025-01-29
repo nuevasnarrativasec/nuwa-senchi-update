@@ -2171,6 +2171,11 @@ html {
         width: 30%;
     }
 
+#audio-final{
+    display: block;
+    margin: 40px auto;
+}
+
 
 @media only screen and (max-width: 640px){
 
