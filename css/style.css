@@ -1364,6 +1364,9 @@ html {
         #comparision-3 .box-texto-foto{
             bottom: 68px;
         }
+        .ba-slider .handle{
+            z-index: 50;
+        }
 
     .box-main-apus{
         margin-bottom: 160px;
