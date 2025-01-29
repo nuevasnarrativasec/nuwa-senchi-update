@@ -1068,7 +1068,10 @@ html {
         position: absolute;
         top: 0;
         width: 100%;         
-}
+    }
+    #myVideoMovil{
+        display: none;
+    }
 .scrollmagic-pin-spacer.adjust-height {
     height: 100vh !important;  
     min-height: 100vh !important;
@@ -2406,10 +2409,14 @@ p.parrafo-cierre{
     }
 
     #videoContainer{
-        height: 30vh !important;
+        height: 27vh !important;
     }
     #myVideo{
+        display: none;
         height: 30vh;
+    }
+    #myVideoMovil{
+        display: block;
     }
     .bloque-texto p{
         font-size: 17px;
