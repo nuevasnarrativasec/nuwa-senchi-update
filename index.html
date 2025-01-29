@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css?v62">
+    <link rel="stylesheet" href="./css/style.css?v63">
     <link rel="stylesheet" href="./css/before-after.min.css">
 </head>
 <body>
@@ -271,21 +271,21 @@
  
             </div>
 
-            <div class="block" id="block-15-mapa">
- 
-            </div>
-
-            <div class="block" id="block-16-mapa">
- 
-            </div>
-
-            <div class="block block-relative" id="block-17-mapa">
+            <div class="block block-relative" id="block-15-mapa">
                 <div class="bloque-texto">
                     <p>
                         En el 2024, el 14.5% de las adolescentes entre 15 y 19 años quedaron embarazadas (556 casos), debido a la violencia sexual, la falta de educación sexual y carencia de servicios de salud.
                     </p>
                 </div>
             </div>
+
+            <div class="block" id="block-16-mapa">
+ 
+            </div>
+
+            <div class="block" id="block-17-mapa">
+ 
+            </div>            
 
             <div class="block block-relative" id="block-18-mapa">
                 <div class="bloque-texto">
@@ -297,21 +297,23 @@
 
             <!-- mapa 5 -->
 
-            <div class="block" id="block-19-mapa">
- 
+            <div class="block block-relative" id="block-19-mapa">
+                <div class="bloque-texto">
+                    <p>
+                        La violencia en los colegios de Condorcanqui evidencia cómo las dinámicas escolares también reflejan problemas sociales más amplios.
+                    </p>
+                </div>
             </div>
 
             <div class="block" id="block-20-mapa">
  
             </div>
 
-            <div class="block block-relative" id="block-21-mapa">
-                <div class="bloque-texto">
-                    <p>
-                        En 2024, la mortalidad materna alcanzó 4 casos y una tasa de 62 por cada 100,000 nacidos vivos, superando el promedio nacional.
-                    </p>
-                </div>
+            <div class="block" id="block-21-mapa">
+ 
             </div>
+
+            
 
         </div>
     </div>
@@ -2855,7 +2857,7 @@
             new ScrollMagic.Scene({
             triggerElement: ".section",
                 triggerHook: 0,
-                duration: "2700%",
+                duration: "2600%",
             })
             .setPin(".section")
             //.addIndicators({ name: "Section Pin" }) 
@@ -3142,7 +3144,7 @@
             //.addIndicators({ name: "Block 14 Fade-In" })
             .addTo(controller);
 
-            // Bloque 15 - Fade-in - mapa 15
+            // Bloque 17 - Caja de texto 1 | mapa 4
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
@@ -3150,12 +3152,16 @@
                 duration: window.innerHeight,
             })
             .setTween(
-                gsap.to("#block-15-mapa", { opacity: 1, duration: 1 })
+                gsap.to("#block-15-mapa", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
             )
-            //.addIndicators({ name: "Block 15 Fade-In" })
-            .addTo(controller);
+            //.addIndicators({ name: "Bloque 17 - Caja de texto" })
+            .addTo(controller); 
 
-            // Bloque 16 - Fade-in - mapa 16
+            // Bloque 15 - Fade-in - mapa 16
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
@@ -3168,7 +3174,7 @@
             //.addIndicators({ name: "Block 16 Fade-In" })
             .addTo(controller);
 
-            // Bloque 17 - Caja de texto 1 | mapa 4
+            // Bloque 16 - Fade-in - mapa 17
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
@@ -3176,20 +3182,16 @@
                 duration: window.innerHeight,
             })
             .setTween(
-                gsap.to("#block-17-mapa", {
-                    opacity: 1,
-                    y: "-100%", 
-                    duration: 1,
-                })
+                gsap.to("#block-17-mapa", { opacity: 1, duration: 1 })
             )
-            //.addIndicators({ name: "Bloque 17 - Caja de texto" })
-            .addTo(controller); 
+            //.addIndicators({ name: "Block 17 Fade-In" })
+            .addTo(controller);            
             
             // Bloque 18 - Caja de texto 2 | mapa 4
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 22,
+                offset: window.innerHeight * 21,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3201,25 +3203,29 @@
             )
             //.addIndicators({ name: "Bloque 18 - Caja de texto" })
             .addTo(controller);
+
+            // Bloque 19 - Caja de texto 1 | mapa 5
+            new ScrollMagic.Scene({
+                triggerElement: ".section",
+                triggerHook: 0,
+                offset: window.innerHeight * 22,
+                duration: window.innerHeight,
+            })
+            .setTween(
+                gsap.to("#block-19-mapa", {
+                    opacity: 1,
+                    y: "-100%", 
+                    duration: 1,
+                })
+            )
+            //.addIndicators({ name: "Bloque 19 - Caja de texto" })
+            .addTo(controller);
             
-            // Bloque 19 - Fade-in - mapa 19
+            // Bloque 20 - Fade-in - mapa 19
             new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
                 offset: window.innerHeight * 23,
-                duration: window.innerHeight,
-            })
-            .setTween(
-                gsap.to("#block-19-mapa", { opacity: 1, duration: 1 })
-            )
-            //.addIndicators({ name: "Block 19 Fade-In" })
-            .addTo(controller);
-
-            // Bloque 20 - Fade-in - mapa 20
-            new ScrollMagic.Scene({
-                triggerElement: ".section",
-                triggerHook: 0,
-                offset: window.innerHeight * 24,
                 duration: window.innerHeight,
             })
             .setTween(
@@ -3228,22 +3234,20 @@
             //.addIndicators({ name: "Block 20 Fade-In" })
             .addTo(controller);
 
-             // Bloque 21 - Caja de texto 1 | mapa 5
-             new ScrollMagic.Scene({
+            // Bloque 21 - Fade-in - mapa 20
+            new ScrollMagic.Scene({
                 triggerElement: ".section",
                 triggerHook: 0,
-                offset: window.innerHeight * 25,
+                offset: window.innerHeight * 24,
                 duration: window.innerHeight,
             })
             .setTween(
-                gsap.to("#block-21-mapa", {
-                    opacity: 1,
-                    y: "-100%", 
-                    duration: 1,
-                })
+                gsap.to("#block-21-mapa", { opacity: 1, duration: 1 })
             )
-            //.addIndicators({ name: "Bloque 21 - Caja de texto" })
+            //.addIndicators({ name: "Block 21 Fade-In" })
             .addTo(controller);
+
+            
 
         });
     </script>   
