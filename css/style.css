@@ -2177,6 +2177,9 @@ html {
     .ctn-layer-audio{
         width: 90%;
     }
+    #player-container-main{
+        top: 5px;
+    }
 
     .box-main-bajada h2,
     .box-main-bajada p,
@@ -2490,7 +2493,7 @@ html {
     #block-17-mapa{
         background-image: url(../img/mapa-13-3-movil-nuevo.jpg?v3);
     }
-    #block-20-mapa{
+    #block-19-mapa{
         background-image: url(../img/mapa-14-3-movil.jpg?v3);
     }
     #block-21-mapa{
