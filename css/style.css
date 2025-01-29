@@ -2244,31 +2244,37 @@ html {
         font-size: 3rem;
     }
 
-    .box-lideresas ul{
-        display: flex;
+    .box-lideresas ul{        
         list-style-type: none;
         margin: 0;
-        overflow-x: auto;
         padding: 0;
-        white-space: nowrap;
     }
         .box-lideresas ul li{
             display: inline-block;
             margin: 0 8%;
-            min-width: 115px;
+            width: 95px;
         }
         .box-lideresas ul::-webkit-scrollbar {
             display: none;
         }
         .mariposa-lider-1{
+            max-width: 55px;
             top: 10px;
         }
         .mariposa-lider-2{
+            max-width: 55px;
             right: -25px;
+        }
+        .mariposa-lider-3,
+        .mariposa-lider-4,
+        .mariposa-lider-5{
+            max-width: 55px;
         }
         .box-info-lider{
             margin: 20px auto;
         }
+
+    
     #mariposa-footer-2{
         left: 15%;
     }
@@ -2549,7 +2555,8 @@ html {
     .box-lideresas h4, 
     .box-main-comparativo h4, 
     .box-main-apus h4{
-        line-height: 0.9;
+        font-size: 27px;
+        line-height: 1.1;
     }
 
     p.parrafo-cierre{
@@ -2559,5 +2566,7 @@ html {
     span.separador-cierre{
         width: 70%;
     }
+
+    
 
 }
