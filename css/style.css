@@ -1361,15 +1361,18 @@ html {
                 left: -2%;        
                 position: relative;
                 top: -50%;                 
-                width: 102%; 
+                width: 100%; 
                 z-index: 10;
 
-                -webkit-appearance: unset;
+                -webkit-appearance: none;
                 -moz-appearance: none;
+                appearance: none;
+                touch-action: manipulation;
             }
-            input[type=range]:focus { 
+            input[type=range]:focus, 
+            input[type=range]:active { 
                 outline: none; 
-            }
+            } 
             input[type=range]:active { 
                 outline: none;  
             }            
@@ -1387,17 +1390,30 @@ html {
             }
             input[type=range]::-webkit-slider-thumb {
                 background: url('../img/flechas.png') no-repeat center center;
-                background-size: 100%;
+                background-size: contain;
                 height: 40px;   
                 width: 40px; 
                 border-radius: 0;
-                -webkit-appearance: unset;
+                -webkit-appearance: none;
+                appearance: none;
+                cursor: pointer;
+                position: relative;
             }  
             input[type=range]:focus::-webkit-slider-thumb {
                 /*background: rgba(174, 17, 17, 0.5);*/
             }
-            input[type=range]:focus::-moz-range-thumb {
-                /*background: rgba(255,255,255,0.5);*/
+            input[type=range]::-moz-range-thumb {
+                background: url('../img/flechas.png') no-repeat center center;
+                background-size: contain;
+                height: 40px;   
+                width: 40px; 
+                border-radius: 0;
+                cursor: pointer;
+            }
+            /* Barra del slider */
+            input[type=range]::-webkit-slider-runnable-track { 
+                height: 15px;
+                background-color: rgba(255,255,255,0.1);
             }
         .divisor .box-texto-foto{
             background-color: #000 !important;
