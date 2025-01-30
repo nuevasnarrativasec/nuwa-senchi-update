@@ -2268,6 +2268,14 @@ html {
 
 @media only screen and (max-width: 640px){
 
+    #social{
+        left: 0;
+        right: inherit;
+    }
+    .box-controles-audio{
+        top: 10px;
+    }
+
     .ctn-layer-audio{
         width: 90%;
     }
