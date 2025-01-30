@@ -2708,6 +2708,9 @@ html {
     .box-main-conexiones h4{
         font-size: 29px;
     }
+    #tres-lineas{
+        max-width: 330px;
+    }
 
 }
 
