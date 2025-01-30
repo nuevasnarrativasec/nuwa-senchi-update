@@ -118,10 +118,10 @@ html {
             margin-bottom: 40px;
         }
             .box-texto-intro p{
-                font: 17px/1.6 "Roboto", serif;
+                font: 20px/1.6 "Roboto", serif;
                 font-weight: 700;
                 margin: 0 auto;
-                max-width: 580px;
+                max-width: 660px;
                 padding: 20px 0;
             }
             .box-texto-intro .separador{
