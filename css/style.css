@@ -1504,7 +1504,7 @@ html {
             }
         .box-main-promesometro h4{
             color: #8419b9;
-            font: 36px / 1.1 "Roboto", serif;
+            font: 29px/1.1 "Roboto", serif;
             font-weight: 700;
             margin: 5px auto;
             text-align: center;
@@ -2705,7 +2705,9 @@ html {
                 font-size: 17px;
                 padding: 0 2px;
             }
-    
+    .box-main-conexiones h4{
+        font-size: 29px;
+    }
 
 }
 
