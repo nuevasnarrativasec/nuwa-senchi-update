@@ -70,7 +70,7 @@ html {
                 }
 
 .box-layer-audio{
-    background-color: rgba(132, 25, 185, 0.98);
+    background-color: rgba(132, 25, 185, 0.99);
     height: 100%;
     position: fixed;
     width: 100%;
@@ -118,7 +118,8 @@ html {
             margin-bottom: 40px;
         }
             .box-texto-intro p{
-                font: 15px/1.9 'from_where_you_areregular';
+                font: 17px/1.6 "Roboto", serif;
+                font-weight: 700;
                 margin: 0 auto;
                 max-width: 580px;
                 padding: 20px 0;
