@@ -2102,11 +2102,11 @@ html {
             transform: translateY(100%);
         } 
         #block-13-mapa {
-            background-image: url('../img/mapa-10-3.jpg?v2');
+            background-image: url('../img/mapa-10-3-nuevo.jpg?v2');
             z-index: 160;
         } 
         #block-14-mapa {
-            background-image: url('../img/mapa-11-3.jpg?v2');
+            background-image: url('../img/mapa-11-3-nuevo.jpg?v2');
             z-index: 170;
         } 
         #block-15-mapa {            
@@ -2604,10 +2604,10 @@ html {
         background-image: url(../img/mapa-9-3-3-movil.jpg?v3);
     }
     #block-13-mapa{
-        background-image: url(../img/mapa-10-3-movil.jpg?v3);
+        background-image: url(../img/mapa-10-4-movil.jpg?v3);
     }
     #block-14-mapa{
-        background-image: url(../img/mapa-11-3-movil-nuevo.jpg?v3);
+        background-image: url(../img/mapa-11-3-movil-nuevo-2.jpg?v3);
     }
     #block-16-mapa{
         background-image: url(../img/mapa-12-3-movil-nuevo.jpg?v3);
