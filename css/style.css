@@ -1508,6 +1508,7 @@ html {
         }
         .box-main-promesometro p{
             font: 17px / 1.5 "Roboto", serif;
+            letter-spacing: -0.1px;
             margin: 10px auto;
             max-width: 490px;
         }
@@ -1976,7 +1977,7 @@ html {
 }   
     .main-footer img{
         display: block;
-        margin: 0 auto 50px;
+        margin: 0 auto 20px;
         max-width: 150px;
     }      
     .main-footer ul{
