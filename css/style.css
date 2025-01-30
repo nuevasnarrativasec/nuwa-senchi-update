@@ -1081,6 +1081,7 @@ html {
 
 
 #videoContainer {
+    background-color: #000;
     height: 100vh !important;
     overflow: visible;
     position: relative;
@@ -1088,12 +1089,13 @@ html {
 
     #myVideo {
         background-color: #000;
-        height: 100vh;
-        left: 0;
-        object-fit: cover;
+        height: 90vh;
+        left: 50%;
+        object-fit: contain;
         position: absolute;
-        top: 0;
-        width: 100%;         
+        top: 50%;
+        width: 85%;
+        transform: translate(-50%, -50%);       
     }
     #myVideoMovil{
         display: none;
