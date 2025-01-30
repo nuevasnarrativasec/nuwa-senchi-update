@@ -1731,7 +1731,7 @@ html {
         
         #info1 .box-head.active,
         #info1 .box-head:hover{
-            background-color: #F37600;            
+            background-color: #711FB4;                    
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;    
             border-bottom-left-radius: 0;        
@@ -1759,7 +1759,7 @@ html {
 
         #info3 .box-head.active,
         #info3 .box-head:hover{
-            background-color: #711FB4;            
+            background-color: #F37600;              
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;    
             border-bottom-left-radius: 0;        
