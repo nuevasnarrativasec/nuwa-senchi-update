@@ -86,8 +86,15 @@ html {
         .ctn-layer-audio img{
             cursor: pointer;
             display: inline-block;
-            margin: 0 8px 15px;
+            margin: 0 2px 15px;
             max-width: 45px;
+        }
+        .ctn-layer-audio .icon-mano{
+            cursor: auto;
+            display: inline-block;
+            margin: 0 auto;
+            max-width: 25px;
+            vertical-align: bottom;            
         }
         .ctn-layer-audio p{
             color: #fff;
@@ -2643,5 +2650,13 @@ html {
         }
 
     
+
+}
+
+@media only screen and (max-height: 732px){
+
+    #main-portada-video{
+        object-fit: contain;
+    }
 
 }
