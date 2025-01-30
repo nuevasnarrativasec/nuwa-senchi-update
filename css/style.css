@@ -2172,9 +2172,41 @@ html {
         color: #8419b9;
         font: 36px / 1.1 "Roboto", serif;
         font-weight: 700;
-        margin: 60px auto 40px;
+        margin: 60px auto 25px;
         text-align: center;
     }
+    ul.leyenda-mapa-conexiones{
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+        ul.leyenda-mapa-conexiones li{
+            display: inline-block;
+            margin: 0 10px;
+            vertical-align: top;
+        }
+            ul.leyenda-mapa-conexiones li span{
+                display: inline-block;
+                height: 10px;                
+                vertical-align: middle;
+                width: 20px;
+            }
+                ul.leyenda-mapa-conexiones li:nth-child(1) span{
+                    background-color: #6d007d;
+                }
+                ul.leyenda-mapa-conexiones li:nth-child(2) span{
+                    background-color: #487f1e;
+                }
+                ul.leyenda-mapa-conexiones li:nth-child(3) span{
+                    background-color: #e6a326;
+                }
+                ul.leyenda-mapa-conexiones li p{
+                    display: inline-block;
+                    font-size: 15px;
+                    line-height: 1;
+                    margin: 0 auto;
+                    vertical-align: bottom;
+                }
 
     #container-conexiones {
         height: 500px;
@@ -2624,9 +2656,9 @@ html {
     }
     
     .box-main-promesometro h4{
-        font: 36px/1 "Roboto", serif;
+        /*font: 36px/1 "Roboto", serif;
         font-weight: 700;
-        margin: 5px auto 30px;
+        margin: 5px auto 30px;*/
     }
     .box-lideresas h4, 
     .box-main-comparativo h4, 
@@ -2652,7 +2684,19 @@ html {
         .box-main-apus ul li{
             max-width: 130px;
         }
-
+    
+    ul.leyenda-mapa-conexiones{
+        margin: 0 auto;
+        max-width: 230px;
+        text-align: left;
+    }
+        ul.leyenda-mapa-conexiones li{
+            margin: 10px;
+        }
+            ul.leyenda-mapa-conexiones li p{
+                font-size: 17px;
+                padding: 0 2px;
+            }
     
 
 }
