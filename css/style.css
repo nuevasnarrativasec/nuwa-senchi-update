@@ -2687,7 +2687,7 @@ span.color{
     }
 
     .ctn-parrafo-cierre{
-        padding-top: 40px;
+        padding-top: 80px;
     }
     p.parrafo-cierre{
         font-size: 15px;
@@ -2723,6 +2723,9 @@ span.color{
     }
     p.fuente{
         padding: 0 10px;
+    }
+    .box-main-conexiones {
+        margin-bottom: 60px;
     }
 
 }
