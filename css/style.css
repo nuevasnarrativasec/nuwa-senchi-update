@@ -2265,6 +2265,10 @@ html {
     margin: 40px auto;
 }
 
+span.color{
+    color: #BFE0DA;
+    font-weight: 800;
+}
 
 @media only screen and (max-width: 640px){
 
