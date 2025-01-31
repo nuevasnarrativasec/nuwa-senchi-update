@@ -12,8 +12,8 @@ html {
 
 @font-face {
     font-family: 'from_where_you_areregular';
-    src: url('../fonts/fromwhereyouare-webfont.woff2') format('woff2'),
-         url('../fonts/fromwhereyouare-webfont.woff') format('woff');
+    src: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/fonts/fromwhereyouare-webfont.woff2') format('woff2'),
+         url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/fonts/fromwhereyouare-webfont.woff') format('woff');
 }
 
 .clear{
@@ -101,7 +101,7 @@ html {
             font: 14px/1.4 "Roboto", serif;
             font-weight: 500;
             margin: 0 auto 15px;
-            max-width: 235px;
+            max-width: 207px;
             text-align: center;            
         }
         .box-layer-audio span{
@@ -168,7 +168,7 @@ html {
             text-indent: -999999px;
             z-index: 2;
 
-            background-image: url('../img/off-morado.png');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/off-morado.png');
             background-repeat: no-repeat!important;
             background-position: center;
             background-size: 30px;
@@ -177,10 +177,10 @@ html {
             
         }
             .play-main {
-                background-image: url('../img/off-morado.png');
+                background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/off-morado.png');
             }
             .pause-main {
-                background-image: url('../img/on-morado.png')!important;
+                background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/on-morado.png')!important;
             }
 
 
@@ -329,7 +329,7 @@ html {
             width: 100%;
         }
             #block-1{
-                background: url('../img/bg-comic-1.jpg') no-repeat center center;
+                background: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/bg-comic-1.jpg') no-repeat center center;
                 background-size: cover;
                 z-index: 10;
             }
@@ -340,7 +340,7 @@ html {
                 z-index: 20;
             }
             #block-3{
-                background: url('../img/bg-comic-2.jpg') no-repeat center center;
+                background: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/bg-comic-2.jpg') no-repeat center center;
                 background-size: cover;
                 opacity: 0;
                 z-index: 30;
@@ -352,7 +352,7 @@ html {
                 z-index: 40;
             }
             #block-5{
-                background: url('../img/bg-comic-3.jpg') no-repeat center center;
+                background: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/bg-comic-3.jpg') no-repeat center center;
                 background-size: cover;
                 opacity: 0;
                 z-index: 50;
@@ -364,7 +364,7 @@ html {
                 z-index: 60;
             }
             #block-7{
-                background: url('../img/bg-comic-3.jpg') no-repeat center center;
+                background: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/bg-comic-3.jpg') no-repeat center center;
                 background-size: cover;
                 opacity: 0;
                 z-index: 70;
@@ -508,7 +508,7 @@ html {
                 text-indent: -999999px;
                 z-index: 2;
             
-                background-image: url('../img/off.png');
+                background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/off.png');
                 background-repeat: no-repeat!important;
                 background-position: center;
                 background-size: 16px;
@@ -517,10 +517,10 @@ html {
                 background-color: #711fb4;
             }
                 .play {
-                    background-image: url('../img/off.png');
+                    background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/off.png');
                 }
                 .pause {
-                    background-image: url('../img/on-2.png')!important;
+                    background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/on-2.png')!important;
                 }
                 #player-container-wika #play-pause-wika::after,
                 #player-container-mapas #play-pause-mapas::after,
@@ -718,15 +718,15 @@ html {
                     font-size: 30px;
                 }
                 #uno{
-                    background: url('../img/circulo-1-nuevo.png') no-repeat center center;
+                    background: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/circulo-1-nuevo.png') no-repeat center center;
                     background-size: 100%;
                 }
                 #dos{
-                    background: url('../img/circulo-2-nuevo.png') no-repeat center center;
+                    background: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/circulo-2-nuevo.png') no-repeat center center;
                     background-size: 100%;
                 }
                 #tres{
-                    background: url('../img/circulo-3-nuevo.png') no-repeat center center;
+                    background: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/circulo-3-nuevo.png') no-repeat center center;
                     background-size: 100%;
                 }
         .box-main-trivia .question{
@@ -1207,7 +1207,7 @@ html {
                     vertical-align: bottom;
                 }
                 .box-botones-mapa-zonas p i{
-                    background: url('../img/icon-seleccionar-mapa.png') no-repeat;
+                    background: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/icon-seleccionar-mapa.png') no-repeat;
                     background-size: 100%;
                     content: '';
                     display: inline-block;
@@ -2030,11 +2030,11 @@ html {
             z-index: 20;
         }    
         #block-2-mapa {
-            background-image: url('../img/mapa-2-3.jpg?v3');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-2-3.jpg?v3');
             z-index: 30;
         }  
         #block-3-mapa {
-            background-image: url('../img/mapa-3-3.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-3-3.jpg?v2');
             z-index: 40;
         } 
         #block-contexto-1 {            
@@ -2044,11 +2044,11 @@ html {
             transform: translateY(100%);
         }   
         #block-4-mapa {
-            background-image: url('../img/mapa-4-3.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-4-3.jpg?v2');
             z-index: 60;
         }  
         #block-5-mapa {
-            background-image: url('../img/mapa-5-3.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-5-3.jpg?v2');
             z-index: 70;
         }  
         /*#block-6-mapa {
@@ -2074,19 +2074,19 @@ html {
             transform: translateY(100%);
         }   
         #block-9-mapa {
-            background-image: url('../img/mapa-7-3.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-7-3.jpg?v2');
             z-index: 100;
         } 
         #block-10-mapa {
-            background-image: url('../img/mapa-8-3.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-8-3.jpg?v2');
             z-index: 110;
         } 
         #block-11-mapa {
-            background-image: url('../img/mapa-9-2-2.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-9-2-2.jpg?v2');
             z-index: 120;
         } 
         #block-11-2-mapa {
-            background-image: url('../img/mapa-9-3-3.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-9-3-3.jpg?v2');
             z-index: 130;
         } 
         #block-12-mapa {            
@@ -2102,11 +2102,11 @@ html {
             transform: translateY(100%);
         } 
         #block-13-mapa {
-            background-image: url('../img/mapa-10-3-nuevo.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-10-3-nuevo.jpg?v2');
             z-index: 160;
         } 
         #block-14-mapa {
-            background-image: url('../img/mapa-11-3-nuevo.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-11-3-nuevo.jpg?v2');
             z-index: 170;
         } 
         #block-15-mapa {            
@@ -2116,11 +2116,11 @@ html {
             transform: translateY(100%);
         } 
         #block-16-mapa {
-            background-image: url('../img/mapa-12-3.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-12-3.jpg?v2');
             z-index: 190;
         } 
         #block-17-mapa {
-            background-image: url('../img/mapa-13-3.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-13-3.jpg?v2');
             z-index: 200;
         }         
         #block-18-mapa {            
@@ -2130,7 +2130,7 @@ html {
             transform: translateY(100%);
         }  
         #block-19-mapa {
-            background-image: url('../img/mapa-14-3.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-14-3.jpg?v2');
             z-index: 220;
         }  
         #block-20-mapa {            
@@ -2140,7 +2140,7 @@ html {
             transform: translateY(100%);
         }          
         #block-21-mapa {
-            background-image: url('../img/mapa-15-3.jpg?v2');
+            background-image: url('https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-15-3.jpg?v2');
             z-index: 240;
         } 
         
@@ -2580,46 +2580,46 @@ html {
     }
     
     #block-2-mapa{
-        background-image: url(../img/mapa-2-3-movil.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-2-3-movil.jpg?v3);
     }
     #block-3-mapa{
-        background-image: url(../img/mapa-3-3-movil.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-3-3-movil.jpg?v3);
     }
     #block-4-mapa{
-        background-image: url(../img/mapa-4-3-movil.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-4-3-movil.jpg?v3);
     }
     #block-5-mapa{
-        background-image: url(../img/mapa-5-3-movil-nuevo.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-5-3-movil-nuevo.jpg?v3);
     }
     #block-9-mapa{
-        background-image: url(../img/mapa-7-3-movil.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-7-3-movil.jpg?v3);
     }
     #block-10-mapa{
-        background-image: url(../img/mapa-8-3-movil.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-8-3-movil.jpg?v3);
     }
     #block-11-mapa{
-        background-image: url(../img/mapa-9-2-2-movil.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-9-2-2-movil.jpg?v3);
     }
     #block-11-2-mapa{
-        background-image: url(../img/mapa-9-3-3-movil.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-9-3-3-movil.jpg?v3);
     }
     #block-13-mapa{
-        background-image: url(../img/mapa-10-4-movil.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-10-4-movil.jpg?v3);
     }
     #block-14-mapa{
-        background-image: url(../img/mapa-11-3-movil-nuevo-2.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-11-3-movil-nuevo-2.jpg?v3);
     }
     #block-16-mapa{
-        background-image: url(../img/mapa-12-3-movil-nuevo.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-12-3-movil-nuevo.jpg?v3);
     }
     #block-17-mapa{
-        background-image: url(../img/mapa-13-3-movil-nuevo.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-13-3-movil-nuevo.jpg?v3);
     }
     #block-19-mapa{
-        background-image: url(../img/mapa-14-3-movil.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-14-3-movil.jpg?v3);
     }
     #block-21-mapa{
-        background-image: url(../img/mapa-15-3-movil-nuevo.jpg?v3);
+        background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-15-3-movil-nuevo.jpg?v3);
     }
     
     #comparision-2 .divisor .box-texto-foto{
