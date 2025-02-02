@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://nuevasnarrativasec.github.io/nuwa-senchi-update/css/style.css?v89">
+    <link rel="stylesheet" href="https://nuevasnarrativasec.github.io/nuwa-senchi-update/css/style.css?v91">
     <link rel="stylesheet" href="https://nuevasnarrativasec.github.io/nuwa-senchi-update/css/before-after.min.css">
 
     <style>
@@ -40,6 +40,7 @@
             height: 0 !important;
         }  
         .nav-d__main-scroll.scrolled{
+            opacity: 0;
             z-index: 9999;
         }
 
@@ -63,6 +64,26 @@
             height: 30px;
             width: 50px;
         }
+        .box-layer-audio{
+            z-index: 9999999;
+            top: 0;
+        }
+
+        @media only screen and (max-width: 640px){
+
+            .box-lider p{
+                font-size: 17px;
+            }
+            p.agradecimientos{
+                margin: 10px auto;
+                max-width: 240px;
+            }
+            #block-14-mapa {
+                background-image: url(https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/mapa-11-4-movil.jpg?v3);
+            }
+
+        }
+
     </style>
 
 
@@ -93,11 +114,11 @@
     </div>
 
     <div id="social">
-        <button id="fb" class="sharer button" data-sharer="facebook" data-hashtag="" data-url="#">Facebook</button>
+        <button id="fb" class="sharer button" data-sharer="facebook" data-hashtag="" data-url="https://elcomercio.pe/ecdata/mujeres-awajun-condorcanqui-cambio-social-amazonia-peru-derechos-ninos-sin-violencia-especdis-noticia/">Facebook</button>
 
-        <button id="wst" class="sharer button" data-sharer="whatsapp" data-title="El Comercio" data-url="#">Whatsapp</button>
+        <button id="wst" class="sharer button" data-sharer="whatsapp" data-title="El Comercio" data-url="https://elcomercio.pe/ecdata/mujeres-awajun-condorcanqui-cambio-social-amazonia-peru-derechos-ninos-sin-violencia-especdis-noticia/">Whatsapp</button>
 
-        <button id="tw" class="sharer button" data-sharer="twitter" data-title="El Comercio" data-hashtags="" data-via="elcomercio_peru" data-url="#">Twitter</button>
+        <button id="tw" class="sharer button" data-sharer="twitter" data-title="El Comercio" data-hashtags="" data-via="elcomercio_peru" data-url="https://elcomercio.pe/ecdata/mujeres-awajun-condorcanqui-cambio-social-amazonia-peru-derechos-ninos-sin-violencia-especdis-noticia/">Twitter</button>
     </div>
 
     <div class="box-controles-audio">
@@ -144,7 +165,7 @@
         <video id="myVideo" playisline >
             <source src="https://nuevasnarrativasec.github.io/nuwa-senchi-update/video/video-kiomy-5.mp4?v5" type="video/mp4" />
         </video>
-        <video id="myVideoMovil" playisline controls width="100%" poster="https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/poster-video.jpg">
+        <video id="myVideoMovil" playisline controls width="100%" poster="https://nuevasnarrativasec.github.io/nuwa-senchi-update/img/poster-video-2.jpg">
             <source src="https://nuevasnarrativasec.github.io/nuwa-senchi-update/video/video-kiomy-5.mp4?v5" type="video/mp4" />
         </video>
     </div>
@@ -2138,7 +2159,7 @@
                     </a>       
                 </li>
                 <li>
-                    <p>
+                    <p class="agradecimientos">
                         <span>Agradecimientos especiales:</span> 
                         ⁠A las mujeres brigadistas por ser el puente entre el dolor, la justicia y los nuevos comienzos.
                     </p>
